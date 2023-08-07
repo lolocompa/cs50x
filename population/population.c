@@ -13,11 +13,10 @@ int main(void)
     while (n < 9 || e < n);
 
 
-
+    int years = 3;
 
     while(e < n)
     {
-        int years = 0;
         int x = e/3;
         int y = e/4;
         e = e + x - y;
