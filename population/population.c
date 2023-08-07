@@ -13,9 +13,9 @@ int main(void)
     while (n < 9 || e < n);
 
 
-    const char years = 3;
+    int years = 3;
 
+    int r = 5;
 
-
-    printf(years);
+    printf("%i", years + r);
 }
