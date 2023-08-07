@@ -17,5 +17,5 @@ int main(void)
 
     int r = 5;
 
-    printf("%i", years + r);
+    printf("%i/n", years + r);
 }
