@@ -8,11 +8,11 @@ int main(void)
     do
     {
         n = get_int("starting population: ");
-        e = get_int("ending population; ");
+        e = get_int("ending population: ");
     }
     while (n < 9 || e < n);
 
 
-
+    
 
 }
