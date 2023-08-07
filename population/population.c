@@ -4,11 +4,14 @@
 int main(void)
 {
     int n;
+    int e;
     do
     {
         n = get_int("starting population: ");
+        e = get_int("ending population; ");
     }
-    while (n < 9);
+    while (n < 9 || e < n);
+
 
 
 
