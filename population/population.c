@@ -15,11 +15,11 @@ int main(void)
 
     int years = 0;
 
-    while(e < n);
+    while(e < n)
     {
-        x = e/3
-        y = e/4
-        e = e
+        int x = e/3;
+        int y = e/4;
+        
     }
 
 
