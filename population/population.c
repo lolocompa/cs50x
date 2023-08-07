@@ -17,7 +17,9 @@ int main(void)
 
     while(e < n);
     {
-        e = e/3
+        x = e/3
+        y = e/4
+        e = e
     }
 
 
