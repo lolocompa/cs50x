@@ -15,15 +15,8 @@ int main(void)
 
     int years = 3;
 
-    while(e < n)
-    {
-        int x = e/3;
-        int y = e/4;
-        e = e + x - y;
-        years = years + 1;
-
-    }
 
 
-    printf("%i", years);
+
+    printf(years);
 }
