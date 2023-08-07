@@ -13,7 +13,7 @@ int main(void)
     while (n < 9 || e < n);
 
 
-    int years = 0
+    int years = 0;
 
     while(e < n);
     {
