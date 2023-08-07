@@ -13,7 +13,7 @@ int main(void)
     while (n < 9 || e < n);
 
 
-    
+    int years = 0;
 
     while(e < n)
     {
@@ -23,6 +23,7 @@ int main(void)
         int y = e/4;
         e = e + x - y;
         years++;
+
     }
 
     printf("%i\n", years);
