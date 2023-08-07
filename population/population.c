@@ -17,5 +17,5 @@ int main(void)
 
 
 
-    printf("%i", years);
+    printf(years);
 }
