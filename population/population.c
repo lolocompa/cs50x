@@ -13,7 +13,7 @@ int main(void)
     while (n < 9 || e < n);
 
 
-    int years = 3;
+    const char years = 3;
 
 
 
