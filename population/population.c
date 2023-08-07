@@ -18,10 +18,8 @@ int main(void)
     while(e < n)
     {
 
-        int x = e/3;
-        int y = e/4;
-        e = e + x - y;
-        years = years + 1;
+     e = e + e/12;
+     years ++;
 
     }
 
