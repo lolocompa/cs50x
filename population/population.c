@@ -16,7 +16,7 @@ int main(void)
     {
         end = get_int("ending population: ");
     }
-    while (end < start);
+    while (end <= start);
 
 
     int years = 0;
@@ -30,5 +30,5 @@ int main(void)
 
     }
 
-    printf("%i\n", years);
+    printf("years: %i\n", years);
 }
