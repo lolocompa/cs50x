@@ -16,7 +16,7 @@ int main(void)
     {
         end = get_int("ending population: ");
     }
-    while (end <= start);
+    while (end < start);
 
 
     int years = 0;
