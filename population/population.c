@@ -4,13 +4,19 @@
 int main(void)
 {
     int n;
-    int e;
     do
     {
         n = get_int("starting population: ");
+    }
+    while (n < 9);
+
+
+    int e;
+    do
+    {
         e = get_int("ending population: ");
     }
-    while (n < 9 || e < n);
+    while (e < n);
 
 
     int years = 0;
