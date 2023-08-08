@@ -3,28 +3,28 @@
 
 int main(void)
 {
-    int n;
+    int start;
     do
     {
-        n = get_int("starting population: ");
+        start = get_int("starting population: ");
     }
-    while (n < 9);
+    while (start < 9);
 
 
-    int e;
+    int end;
     do
     {
-        e = get_int("ending population: ");
+        end = get_int("ending population: ");
     }
-    while (e < n);
+    while (end < start);
 
 
     int years = 0;
 
-    while(e < n)
+    while(start < end)
     {
 
-     e = e + e/12;
+     start = start + start/12;
      years ++;
 
     }
