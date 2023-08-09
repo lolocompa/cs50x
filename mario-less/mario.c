@@ -11,8 +11,13 @@ int main(void)
     while(height<0 || height>=8);
 
 
+
+
     for(int x = 0; x<height; x++)
     {
-        printf("#\n");
+        for(int y = 0; x<height; y++)
+        {
+            printf("#");
+        }
     }
 }
