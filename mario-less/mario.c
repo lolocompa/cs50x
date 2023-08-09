@@ -21,6 +21,6 @@ int main(void)
             printf("#");
         }
         printf("\n");
-          height--;
+
     }
 }
