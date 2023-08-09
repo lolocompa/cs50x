@@ -15,7 +15,7 @@ int main(void)
 
     for(int x = 0; x<height; x++)
     {
-        for(int y = 0; y<height; y++)
+        for(int y = height; y<height; y++)
         {
 
             printf("#");
