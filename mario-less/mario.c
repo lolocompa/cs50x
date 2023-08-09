@@ -8,5 +8,5 @@ int main(void)
     {
         height = get_int("height: ");
     }
-    while(0<height<8);
+    while();
 }
