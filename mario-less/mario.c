@@ -11,11 +11,10 @@ int main(void)
     while(height<0 || height>=8);
 
 
-
+    int n = 0;
 
     for(int x = 0; x<height; x++)
     {
-        int n = 0;
         n = n + 1;
         for(int y = 0; y<n; y++)
         {
