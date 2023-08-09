@@ -18,6 +18,7 @@ int main(void)
         n++;
         for(int y = 0; y<n; y++)
         {
+            printf(".");
             printf("#");
         }
         printf("\n");
