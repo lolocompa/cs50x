@@ -15,11 +15,12 @@ int main(void)
 
     for(int x = 0; x<height; x++)
     {
-        height--;
+
         for(int y = 0; y<height; y++)
         {
             printf("#");
         }
         printf("\n");
+          height--;
     }
 }
