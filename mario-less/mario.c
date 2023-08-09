@@ -17,7 +17,6 @@ int main(void)
     {
         for(int y = 0; y<height; y++)
         {
-
             printf("#");
         }
         printf("\n");
