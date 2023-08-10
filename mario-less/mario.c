@@ -12,7 +12,7 @@ int main(void)
 
 
 
-
+    int dot = height - 1;
     int n = 0;
 
     for(int x = 0; x<height; x++)
@@ -21,9 +21,9 @@ int main(void)
         n++;
         for(int y = 0; y<n; y++)
         {
-            for(dot = height-1;dot>0; dot--)
+            for(int j = 0; j<dot; j++)
             {
-                print(".")
+                printf(".");
             }
             printf("#");
         }
