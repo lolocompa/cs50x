@@ -21,10 +21,7 @@ int main(void)
         n++;
         for(int y = 0; y<n; y++)
         {
-            for(int j = 0; j<dot; j++)
-            {
-                printf(".");
-            }
+        
             printf("#");
         }
         printf("\n");
