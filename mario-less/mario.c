@@ -25,6 +25,7 @@ int main(void)
             while(dot>=0)
             {
                 printf(".");
+                dot--;
             }
             printf("#");
         }
