@@ -14,13 +14,19 @@ int main(void)
 
 
     int n = 0;
-    int
+
 
     for(int x = 0; x<height; x++)
     {
+        int dot = height - 1;
+        dot--;
         n++;
         for(int y = 0; y<n; y++)
         {
+            while(dot>=0)
+            {
+                printf(".");
+            }
 
             printf("#");
         }
