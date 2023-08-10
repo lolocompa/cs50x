@@ -14,13 +14,14 @@ int main(void)
 
 
     int n = 0;
+    int
 
     for(int x = 0; x<height; x++)
     {
         n++;
         for(int y = 0; y<n; y++)
         {
-            
+
             printf("#");
         }
         printf("\n");
