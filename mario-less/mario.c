@@ -17,7 +17,6 @@ int main(void)
 
     for(int x = 0; x<height; x++)
     {
-        dot = printf
         n++;
         for(int y = 0; y<n; y++)
         {
