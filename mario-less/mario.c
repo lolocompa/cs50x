@@ -10,6 +10,8 @@ int main(void)
     }
     while(height<0 || height>=8);
 
+    for(dot = )
+
 
     int n = 0;
 
