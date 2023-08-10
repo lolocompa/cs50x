@@ -12,16 +12,20 @@ int main(void)
 
 
 
-    int dot = height - 1;
+    
     int n = 0;
 
     for(int x = 0; x<height; x++)
     {
-        dot--;
+        int dot = height - 1;
         n++;
         for(int y = 0; y<n; y++)
         {
-        
+            while(dot>0)
+            {
+                printf(".");
+                dot--;
+            }
             printf("#");
         }
         printf("\n");
