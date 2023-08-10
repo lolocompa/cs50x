@@ -10,13 +10,14 @@ int main(void)
     }
     while(height<0 || height>=8);
 
-    for(dot = )
+
 
 
     int n = 0;
 
     for(int x = 0; x<height; x++)
     {
+        dot = printf
         n++;
         for(int y = 0; y<n; y++)
         {
