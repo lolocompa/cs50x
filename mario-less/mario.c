@@ -20,7 +20,10 @@ int main(void)
         n++;
         for(int y = 0; y<n; y++)
         {
-            
+            for(int dot = height; dot>0;dot--)
+            {
+                printf(".");
+            }
             printf("#");
         }
         printf("\n");
