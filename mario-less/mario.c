@@ -8,7 +8,7 @@ int main(void)
     {
         height = get_int("height: ");
     }
-    while(height<0 || height>=8);
+    while(height<0 || height>=9);
 
 
 
@@ -19,9 +19,9 @@ int main(void)
     {
         dot--;
         n++;
-        for(int j = 0; j<dot; dot--)
+        for(int j = 0; j<dot; j++)
         {
-            printf(".");
+            printf(" ");
         }
         for(int y = 0; y<n; y++)
         {
