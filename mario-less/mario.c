@@ -19,6 +19,7 @@ int main(void)
     for(int x = 0; x<height; x++)
     {
         int dot = height - 1;
+        dot--;
         n++;
         for(int y = 0; y<n; y++)
         {
