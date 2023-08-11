@@ -98,7 +98,7 @@ int calculate_pennies(int cents)
 quarters = 0
 
 
-for(int j = cents - 25; cents>0; quarters ++)
+for(int j = cents - 25; j>0; quarters ++)
 {
-    
+
 }
