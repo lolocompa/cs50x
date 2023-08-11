@@ -96,6 +96,6 @@ int calculate_pennies(int cents)
 
 
 
-j = cents - 25
 
-while()
+
+for(int j = 0)
