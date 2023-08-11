@@ -35,11 +35,28 @@ int main(void)
     printf("%i\n", coins);
 }
 
+
+
+
+
+
+
+
+
+
+
 int get_cents(void)
 {
-    // TODO
-    return 0;
+    int cents;
+    do
+    {
+        cents = get_int("cents: ");
+    }
+    while(cents < 1);
+    return cents;
 }
+
+
 
 int calculate_quarters(int cents)
 {
@@ -47,17 +64,27 @@ int calculate_quarters(int cents)
     return 0;
 }
 
+
+
+
+
 int calculate_dimes(int cents)
 {
     // TODO
     return 0;
 }
 
+
+
+
 int calculate_nickels(int cents)
 {
     // TODO
     return 0;
 }
+
+
+
 
 int calculate_pennies(int cents)
 {
