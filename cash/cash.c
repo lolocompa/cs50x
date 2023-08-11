@@ -60,7 +60,7 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
-    
+
     return 0;
 }
 
@@ -91,3 +91,11 @@ int calculate_pennies(int cents)
     // TODO
     return 0;
 }
+
+
+
+
+
+
+
+while()
