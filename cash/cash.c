@@ -88,8 +88,12 @@ int calculate_dimes(int cents)
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    int nickels = 0;
+    for(int y = cents - 5; y>= 0; nickels++)
+    {
+        y = y - 5;
+    }
+    return nickels;
 }
 
 
