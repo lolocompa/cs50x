@@ -75,8 +75,12 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    int dimes = 0;
+    for(int x = cents - 10; x>= 0; dimes++)
+    {
+        x = x - 10;
+    }
+    return dimes;
 }
 
 
