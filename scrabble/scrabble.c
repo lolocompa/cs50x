@@ -26,9 +26,7 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    for(int i = 0; i < 26; i++)
-    {
-        word[i]
-    }
+    char a = get_char("char: ");
+    printf("%i", a);
     return 0;
 }
