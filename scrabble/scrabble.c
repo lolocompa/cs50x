@@ -19,16 +19,17 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-}
-
-int compute_score(string word)
-{
-    // TODO: Compute and return score for string
     int letters = 'a';
     for(int i = 0; i < 26; i++, letters++)
     {
 
     }
-    printf("%c", letters);
+    printf("%c ", letters);
+}
+
+int compute_score(string word)
+{
+    // TODO: Compute and return score for string
+
     return 0;
 }
