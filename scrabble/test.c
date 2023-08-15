@@ -11,3 +11,21 @@ int main(void)
     printf("%i", letters[0]);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+ int letters = 'a';
+    for(int i = 0; i < 26; i++, letters++)
+    {
+
+        printf("%i ", POINTS[i]);
+
+    }
