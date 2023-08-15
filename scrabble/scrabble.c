@@ -27,7 +27,7 @@ int compute_score(string word)
     int letters = 'a';
     for(int i = 0; i < 26; i++, letters++)
     {
-        letters = POINTS[i];
+        
     }
     printf("%i", letters);
     return 0;
