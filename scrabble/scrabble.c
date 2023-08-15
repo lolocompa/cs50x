@@ -22,8 +22,8 @@ int main(void)
     int letters = 'a';
     for(int i = 0; i < 26; i++, letters++)
     {
-        letters = POINTS[i];
-        printf("%c ", letters);
+        
+        printf("%i ", POINTS[i]);
 
     }
 
