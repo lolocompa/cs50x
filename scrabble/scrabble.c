@@ -24,10 +24,10 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    int letters = 'a';
     for(int i = 0; i < 26; i++, letters++)
     {
-        int letters = '
-        letters = POINTS[i]
+        letters = POINTS[i];
     }
     return 0;
 }
