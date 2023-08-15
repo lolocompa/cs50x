@@ -22,9 +22,10 @@ int main(void)
     int letters = 'a';
     for(int i = 0; i < 26; i++, letters++)
     {
+        printf("%c ", letters);
 
     }
-    printf("%c ", letters);
+
 }
 
 int compute_score(string word)
