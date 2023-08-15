@@ -19,12 +19,12 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
+    int b = "a + 1;
+     printf("%c", b)
 }
 
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-     int a = POINTS[0];
-    printf("%i", a);
     return 0;
 }
