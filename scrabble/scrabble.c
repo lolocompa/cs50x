@@ -47,6 +47,10 @@ int compute_score(string word)
         {
             word[i] = tolower(word[i]);
         }
+        else if (word[i] < 97)
+        {
+            word[i] = 97;
+        }
         word[i] = POINTS[word[i] - 97];
         result = word[i] + result;
     }
