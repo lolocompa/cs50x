@@ -26,6 +26,10 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    int lenght = stlen()
-    for(i)
+    int lenght = strlen(word);
+    for(int i = 0; i < lenght; i++)
+    {
+        word[i] = POINTS[97 - word[i]];
+    }
+    return 0
 }
