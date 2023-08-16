@@ -25,12 +25,12 @@ int main(void)
 
 int compute_score(string word)
 {
-    
+    int result = 0;
     int lenght = strlen(word);
     for(int i = 0; i < lenght; i++)
     {
         word[i] = POINTS[97 - word[i]];
-
+        result = word[i] + word [i - 1];
     }
     return result;
 }
