@@ -40,6 +40,7 @@ int compute_score(string word)
     int lenght = strlen(word);
     for(int i = 0; i < lenght; i++)
     {
+        if word[i]
         word[i] = POINTS[word[i] - 97];
         result = word[i] + result;
     }
