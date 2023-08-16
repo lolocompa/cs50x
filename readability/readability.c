@@ -3,6 +3,8 @@
 
 int main(void)
 {
-    string text = get_string("Text: ")
+    string text = get_string("Text: ");
+    int letters = sterlen(text[]);
+    printf("%i", letters)
 
 }
