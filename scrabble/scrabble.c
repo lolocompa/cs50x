@@ -32,7 +32,7 @@ int main(void)
         printf("Tie!\n");
     }
     printf("%i\n", score1);
-    printf("%i\n", );
+    printf("%i\n", score2);
 
 
 }
@@ -49,7 +49,7 @@ int compute_score(string word)
         }
         else if (word[i] < 97)
         {
-            word[i] = 96;
+            word[i] = 63;
         }
         word[i] = POINTS[word[i] - 97];
         result = word[i] + result;
