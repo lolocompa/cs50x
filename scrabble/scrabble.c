@@ -31,8 +31,6 @@ int main(void)
     {
         printf("Tie!\n");
     }
-    printf("%i\n", score1);
-    printf("%i\n", score2);
 
 
 }
