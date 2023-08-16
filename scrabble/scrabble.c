@@ -19,7 +19,7 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    printf("%i\n", score1);
+    if score
 
 
 }
