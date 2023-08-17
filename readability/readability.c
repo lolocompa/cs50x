@@ -23,10 +23,15 @@ int count_letters(string text)
     for(int i = 0; i < lenght; i++)
     {
         if (text[i] == 32)
+        {
         spaces++;
+        }
         if ( text[i] < 97)
+        {
+            punctuation++;
+        }
     }
-    int letters = lenght - spaces;
+    int letters = lenght - spaces - punctuation;
     return letters;
 
 }
