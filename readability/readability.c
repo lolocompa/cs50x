@@ -30,11 +30,11 @@ int main(void)
             sentences++;
         }
     }
-    int wor = words * 100;
+    int wor = sentences / words;
     float L = letters/words * 100;
-    int S = sentences / wor;
+    float S = sentences / wor;
     int index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Grade %i\n", S);
+    printf("Grade %f\n", wor);
 
 
     printf("%i\n", letters);
