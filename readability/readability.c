@@ -30,9 +30,14 @@ int main(void)
             sentences++;
         }
     }
+
+    
+
+
     printf("%i\n", letters);
     printf("%i\n", words);
     printf("%i\n", sentences);
+
 }
 
 
