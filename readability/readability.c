@@ -31,7 +31,7 @@ int main(void)
         }
     }
 
-    
+    int s =
 
 
     printf("%i\n", letters);
