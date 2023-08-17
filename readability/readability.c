@@ -22,7 +22,7 @@ int main(void)
 
 
 
-    int sentences = 0;
+    float sentences = 0;
     for(int j = 0; j < len_text; j++)
     {
         if(text[j] == 46 || text[j] == 33 || text[j] == 63)
@@ -30,16 +30,16 @@ int main(void)
             sentences++;
         }
     }
-    float wor = float(sentences) / words;
+    float wor = sentences / words;
     float L = letters/words * 100;
     float S = sentences / wor;
     int index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Grade %i\n", wor);
+    printf("Grade %f\n", wor);
 
 
     printf("%i\n", letters);
     printf("%i\n", words);
-    printf("%i\n", sentences);
+    printf("%f\n", sentences);
 
 }
 
