@@ -34,7 +34,7 @@ int main(void)
     float L = letters/words * 100;
     float S = wor * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    int grade = (int) index;
+    int grade = index + 0.5;
     if (grade>16)
     {
         printf("Grade 16+\n");
@@ -48,9 +48,7 @@ int main(void)
     printf("Grade %i\n", grade);
     }
 
-    printf("%f\n", letters);
-    printf("%f\n", words);
-    printf("%f\n", index);
+    
 
 }
 
