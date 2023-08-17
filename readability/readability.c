@@ -41,14 +41,14 @@ int main(void)
     }
     else if (grade<1)
     {
-        printf("Before grade 1");
+        printf("Before Grade 1");
     }
     else
     {
     printf("Grade %i\n", grade);;
     }
 
-    
+
 
 }
 
