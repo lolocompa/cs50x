@@ -30,7 +30,7 @@ int main(void)
             sentences++;
         }
     }
-    int wor = sentences / words;
+    float wor = float(sentences) / words;
     float L = letters/words * 100;
     float S = sentences / wor;
     int index = 0.0588 * L - 0.296 * S - 15.8;
