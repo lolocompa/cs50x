@@ -34,7 +34,7 @@ int main(void)
     float L = letters/words * 100;
     float S = sentences / wor;
     int index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Grade %f\n", wor);
+    printf("Grade %i\n", wor);
 
 
     printf("%i\n", letters);
