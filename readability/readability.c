@@ -35,7 +35,18 @@ int main(void)
     float S = wor * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int grade = (int) index;
-    printf("Grade %f\n", index);
+    if (grade>16)
+    {
+        printf("Grade 16+");
+    }
+    else if (grade<1)
+    {
+        printf("Before grade 1");
+    }
+    else
+    {
+    printf("Grade %i\n", grade);;
+    }
 
 
     printf("%f\n", letters);
@@ -55,7 +66,7 @@ int count_letters(string text)
     {
         if (isupper(text[i]))
         {
-            tolower(text[i]);
+            text[i] = tolower(text[i]);
         }
         if ( text[i] < 97)
         {
