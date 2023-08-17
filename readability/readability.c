@@ -11,7 +11,7 @@ int main(void)
     int letters = count_letters(text);
     int len_text = strlen(text);
 
-    int words = 1;
+    float words = 1;
     for(int i = 0; i < len_text; i++)
     {
         if (text[i] == 32)
@@ -38,7 +38,7 @@ int main(void)
 
 
     printf("%i\n", letters);
-    printf("%i\n", words);
+    printf("%f\n", words);
     printf("%f\n", sentences);
 
 }
