@@ -33,7 +33,7 @@ int main(void)
     float wor = sentences / words;
     float L = letters/words * 100;
     float S = wor * 100;
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int index = 0.0588 * (int)L - 0.296 * (int)S - 15.8;
     int grade = (int) index;
     if (grade>16)
     {
@@ -50,7 +50,7 @@ int main(void)
 
     printf("%f\n", letters);
     printf("%f\n", words);
-    printf("%f\n", S);
+    printf("%i\n", index);
 
 }
 
