@@ -9,7 +9,18 @@ int main(void)
     string text = get_string("Text: ");
 
     int letters = count_letters(text);
-    printf("%i", letters);
+    int len_text = strlen(text);
+
+    int sentences = 0;
+    for(int i = 0; i < len_text; i++)
+    {
+        if (text[i] == 32)
+        {
+            sentences++;
+        }
+    }
+    printf("%i\n", letters);
+    printf("%i\n", sentences);
 }
 
 
