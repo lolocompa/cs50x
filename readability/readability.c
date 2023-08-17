@@ -31,10 +31,10 @@ int main(void)
         }
     }
 
-    int s = letters/words * 100;
-    int l = sentences/words * 100;
-    int grade = 0.0588 * s - 0.296 * l - 15.8;
-    printf("Grade %i\n", grade);
+    int L = letters/words * 100;
+    int S = sentences/words * 100;
+    int index = 0.0588 * L - 0.296 * S - 15.8;
+    printf("Grade %i\n", index);
 
 
     printf("%i\n", letters);
