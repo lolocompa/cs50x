@@ -48,8 +48,9 @@ int main(void)
     printf("Grade %i\n", grade);
     }
 
-
-
+    printf("%f\n", letters);
+    printf("%f\n", words);
+    printf("%f\n", sentences);
 
 }
 
