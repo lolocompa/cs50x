@@ -11,7 +11,7 @@ int main(void)
     int letters = count_letters(text);
     int len_text = strlen(text);
 
-    int sentences = 0;
+    int sentences = 1;
     for(int i = 0; i < len_text; i++)
     {
         if (text[i] == 32)
