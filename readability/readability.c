@@ -11,16 +11,16 @@ int main(void)
     int letters = count_letters(text);
     int len_text = strlen(text);
 
-    int sentences = 1;
+    int words = 1;
     for(int i = 0; i < len_text; i++)
     {
         if (text[i] == 32)
         {
-            sentences++;
+            words++;
         }
     }
     printf("%i\n", letters);
-    printf("%i\n", sentences);
+    printf("%i\n", words);
 }
 
 
