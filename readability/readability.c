@@ -53,7 +53,10 @@ int count_letters(string text)
     int puntuation = 0;
     for(int i = 0; i < lenght; i++)
     {
-
+        if (isupper(text[i]))
+        {
+            tolower(text[i]);
+        }
         if ( text[i] < 97)
         {
             puntuation++;
