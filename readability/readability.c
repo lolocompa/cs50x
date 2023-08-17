@@ -19,8 +19,20 @@ int main(void)
             words++;
         }
     }
+
+
+
+    int sentences = 0;
+    for(int j = 0; j < len_text; j++)
+    {
+        if(text[j] == 46 || text[j] == 33 || text[j] == 63)
+        {
+            sentences++;
+        }
+    }
     printf("%i\n", letters);
     printf("%i\n", words);
+    printf("%i\n", sentences);
 }
 
 
