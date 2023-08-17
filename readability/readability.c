@@ -50,7 +50,7 @@ int main(void)
 
     printf("%f\n", letters);
     printf("%f\n", words);
-    printf("%f\n", sentences);
+    printf("%f\n", S);
 
 }
 
