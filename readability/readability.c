@@ -31,10 +31,10 @@ int main(void)
         }
     }
 
-    int L = letters/words * 100;
-    int S = sentences/words * 100;
+    float L = letters/words * 100;
+    float S = sentences/words * 100;
     int index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Grade %i\n", L);
+    printf("Grade %f\n", L);
 
 
     printf("%i\n", letters);
