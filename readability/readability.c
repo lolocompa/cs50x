@@ -8,7 +8,7 @@ int main(void)
 {
     string text = get_string("Text: ");
 
-    int letters = count_letters(text);
+    float letters = count_letters(text);
     int len_text = strlen(text);
 
     float words = 1;
@@ -33,11 +33,12 @@ int main(void)
     float wor = sentences / words;
     float L = letters/words * 100;
     float S = wor * 100;
-    int index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Grade %i\n", S);
+    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int grade = (int) index;
+    printf("Grade %f\n", index);
 
 
-    printf("%i\n", letters);
+    printf("%f\n", letters);
     printf("%f\n", words);
     printf("%f\n", sentences);
 
