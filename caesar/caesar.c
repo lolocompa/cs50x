@@ -25,21 +25,27 @@ int main(int argc, string argv[])
 bool only_digits(string key)
 {
     int lenght = strlen(key);
-    int check = 0
+    int check = 0;
     for(int i = 0; i < lenght; i++)
     {
         if (key[i] < 0)
         {
-            check++
+            check++;
         }
         if ( key[i] > 9)
         {
-            check++
+            check++;
         }
-        else
-        {
-            return false;
-        }
+        
+
+    }
+    if (check == i)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 
 }
