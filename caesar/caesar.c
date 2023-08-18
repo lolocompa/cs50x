@@ -29,7 +29,7 @@ bool only_digits(string key)
     int lenght = strlen(key);
     int check = 0;
     int compare = 0;
-    for(int i = 0; i < lenght; i++)
+    for(int i = 0; i < lenght; i++, compare++)
     {
         if (key[i] < 0)
         {
@@ -39,7 +39,6 @@ bool only_digits(string key)
         {
             check++;
         }
-        compare++;
 
     }
     if (check == compare)
