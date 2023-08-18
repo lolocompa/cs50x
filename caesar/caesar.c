@@ -18,7 +18,8 @@ int main(int argc, string argv[])
          return 1;
     }
     bool key = only_digits(argv[1]);
-    printf("%i", key);
+    bool lo = false;
+    printf("%i\n", key);
 }
 
 
