@@ -32,11 +32,11 @@ bool only_digits(string key)
     int compare = 0;
     for(int i = 0; i < lenght; i++, compare++)
     {
-        if (key[i] < 0)
+        if (key[i] > 0)
         {
             check++;
         }
-        if ( key[i] > 9)
+        if ( key[i] < 9)
         {
             check++;
         }
