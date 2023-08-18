@@ -24,7 +24,7 @@ int main(int argc, string argv[])
 
 bool only_digits(string key)
 {
-    int length = strlen(key);
+    int lenght = strlen(key);
     for(int i = 0; i < lenght; i++)
     {
         if (key[i] < 0)
