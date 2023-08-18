@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
+bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
@@ -16,7 +17,8 @@ int main(int argc, string argv[])
          printf("error\n");
          return 1;
     }
-
+    bool key = only_digits(argv[1]);
+    printf("%i", key);
 }
 
 
@@ -26,6 +28,7 @@ bool only_digits(string key)
 {
     int lenght = strlen(key);
     int check = 0;
+    int compare = 0;
     for(int i = 0; i < lenght; i++)
     {
         if (key[i] < 0)
@@ -36,10 +39,10 @@ bool only_digits(string key)
         {
             check++;
         }
-        
+        compare++;
 
     }
-    if (check == i)
+    if (check == compare)
     {
         return true;
     }
