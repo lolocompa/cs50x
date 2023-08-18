@@ -18,8 +18,10 @@ int main(int argc, string argv[])
          return 1;
     }
     bool key = only_digits(argv[1]);
-    string l = "9";
-    printf("%i", key);
+    if(key == 0)
+    {
+        printf("Usage: ./caesar key\n");
+    }
 }
 
 
