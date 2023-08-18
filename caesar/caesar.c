@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <atoi.h>
 
 bool only_digits(string key);
 
