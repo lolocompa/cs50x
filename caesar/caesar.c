@@ -1,5 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
 
 int main(int argc, string argv[])
 {
@@ -19,3 +22,22 @@ int main(int argc, string argv[])
 
 
 
+bool only_digits(string key)
+{
+    int length = strlen(key);
+    for(int i = 0; i < lenght; i++)
+    {
+        if (key[i] < 0)
+        {
+            return true;
+        }
+        if ( key[i] > 9)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
