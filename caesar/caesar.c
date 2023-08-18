@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     }
     bool key = only_digits(argv[1]);
     bool lo = false;
-    printf("%i\n", key);
+    
 }
 
 
@@ -50,5 +50,6 @@ bool only_digits(string key)
     {
         return false;
     }
+    printf("%i", check);
 
 }
