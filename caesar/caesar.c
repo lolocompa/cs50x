@@ -18,8 +18,8 @@ int main(int argc, string argv[])
          return 1;
     }
     bool key = only_digits(argv[1]);
-    bool lo = false;
-    
+    string l = "9";
+    printf("%i", key);
 }
 
 
@@ -32,14 +32,13 @@ bool only_digits(string key)
     int compare = 0;
     for(int i = 0; i < lenght; i++, compare++)
     {
-        if (key[i] > 0)
+        if (key[i] > 48)
         {
             check++;
         }
-        if ( key[i] < 9)
+        if ( key[i] < 57)
         {
-            check++;
-        }
+            chec
 
     }
     if (check == compare)
@@ -50,6 +49,5 @@ bool only_digits(string key)
     {
         return false;
     }
-    printf("%i", check);
 
 }
