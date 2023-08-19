@@ -32,7 +32,7 @@ int main(int argc, string argv[])
 
     int plain_lenght = strlen(plaintext);
 
-    int j = rotate('c', 2);
+    int j = rotate(plaintext[3], 2);
 
 }
 
