@@ -69,8 +69,8 @@ bool only_digits(string key)
     void rotate(char c, int number);
     {
 
-        int num = number + 2
-        in
+
+        printf("%i", c);
 
     }
 }
