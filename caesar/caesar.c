@@ -32,10 +32,7 @@ int main(int argc, string argv[])
 
     int plain_lenght = strlen(plaintext);
 
-    for(int i = 0; i < plain_lenght; i++)
-    {
-        int rotated_letter = rotate(2, 'c');
-    }
+    int j = rotate('c', 2);
 
 }
 
