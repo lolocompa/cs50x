@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int rotate(char letter, int number);
+void rotate(char letter, int number);
 bool only_digits(string key);
 
 int main(int argc, string argv[])
@@ -32,7 +32,7 @@ int main(int argc, string argv[])
 
     int plain_lenght = strlen(plaintext);
 
-     rotate(plaintext[3], 2);
+     rotate('c', 2);
 
 }
 
@@ -66,10 +66,10 @@ bool only_digits(string key)
 
 
 
-    void rotate(char letter, int number);
+    void rotate(char c, int number);
     {
         int number = 6;
-        int let = letter + 1;
-        return let;
+        int let = c + 1;
+
     }
 }
