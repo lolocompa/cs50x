@@ -76,7 +76,8 @@ bool only_digits(string key)
 
 char rotate(char letter, int number)
 {
-    if (letter + number > 122)
+    int j = letter + number;
+    if (j > 122)
     {
         for(int i = 1; number > 26; i++)
         {
