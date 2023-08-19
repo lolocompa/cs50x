@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     }
 
 
-    atoi(argv[1]);
+    int atoi(string argv[1]);
 }
 
 
