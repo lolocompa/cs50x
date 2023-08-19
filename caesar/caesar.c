@@ -32,7 +32,7 @@ int main(int argc, string argv[])
 
     int plain_lenght = strlen(plaintext);
 
-     rotate('c', 2);
+     rotate('c', 55);
 
 }
 
@@ -68,8 +68,9 @@ bool only_digits(string key)
 
     void rotate(char c, int number);
     {
-        int number = 6;
-        int let = c + 1;
+
+        int num = number + 2
+        in
 
     }
 }
