@@ -62,15 +62,14 @@ bool only_digits(string key)
     }
 
 
+}
 
 
 
+char rotate(char q, int i);
+{
 
-    char rotate(char q, int i);
-    {
 
+    printf("%i", i);
 
-        printf("%i", i);
-
-    }
 }
