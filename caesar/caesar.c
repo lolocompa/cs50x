@@ -34,7 +34,9 @@ int main(int argc, string argv[])
     int plain_lenght = strlen(plaintext);
 
     for(int i = 0; i < plain_lenght; i++)
-    
+    {
+        
+    }
 
 }
 
