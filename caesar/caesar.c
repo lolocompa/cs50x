@@ -35,9 +35,10 @@ int main(int argc, string argv[])
     for(int i = 0; i < plain_lenght; i++)
     {
        char cypherletter = rotate(plaintext[i], key_num);
-       printf("%c", cypherletter);
+       printf("cyphertext: %c", cypherletter);
 
     }
+    printf("\n");
 
 }
 
