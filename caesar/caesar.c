@@ -35,7 +35,7 @@ int main(int argc, string argv[])
 
     for(int i = 0; i < plain_lenght; i++)
     {
-        
+        int rotated_letter = rotate(plaintext[i], key_num);
     }
 
 }
