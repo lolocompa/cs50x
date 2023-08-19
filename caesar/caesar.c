@@ -79,9 +79,10 @@ char rotate(char letter, int number)
     int j = letter + number;
     if (j > 122)
     {
-        for(int i = 1; number > 26; i++)
+        for(int i = 1; j > 122; i++)
         {
             number = number - 26 * i;
+            j = letter + number;
         }
     }
     char cypher = letter + number;
