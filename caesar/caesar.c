@@ -6,6 +6,7 @@
 
 
 bool only_digits(string key);
+int rotate(char letter, int number);
 
 int main(int argc, string argv[])
 {
@@ -27,6 +28,13 @@ int main(int argc, string argv[])
 
 
     int key_num = atoi(argv[1]);
+
+    string plaintext = get_string("plaintext: ");
+
+    int plain_lenght = strlen(plaintext);
+
+    for(int i = 0; i < plain_lenght; i++)
+    
 
 }
 
@@ -60,5 +68,8 @@ bool only_digits(string key)
 
 
 
-    int
+    int rotate(char letter, int number);
+    {
+
+    }
 }
