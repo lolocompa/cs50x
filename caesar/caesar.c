@@ -4,9 +4,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-bool only_digits(string key);
 int rotate(char letter, int number);
+bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
