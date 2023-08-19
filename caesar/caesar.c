@@ -76,18 +76,19 @@ bool only_digits(string key)
 
 char rotate(char letter, int number)
 {
-    if
-    int j = letter + number;
-    if (j > 122)
+    if(letter < 123 && letter > 96)
     {
-        for(int i = 1; j > 122; i++)
+        int j = letter + number;
+        if (j > 122)
         {
-            number = number - 26 * i;
-            j = letter + number;
+            for(int i = 1; j > 122; i++)
+            {
+                number = number - 26 * i;
+                j = letter + number;
+            }
         }
+        char cypher = letter + number;
+        return cypher;
     }
-    char cypher = letter + number;
-    return cypher;
-
 
 }
