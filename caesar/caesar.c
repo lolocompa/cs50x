@@ -23,6 +23,7 @@ int main(int argc, string argv[])
     if(key == 0)
     {
         printf("Usage: ./caesar key\n");
+        return 1;
     }
 
 
