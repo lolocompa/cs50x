@@ -32,7 +32,12 @@ int main(int argc, string argv[])
 
     int plain_lenght = strlen(plaintext);
 
-     rotate('c', 55);
+    for(int i = 0; i < plain_lenght; i++)
+    {
+       char cypherletter = rotate(plaintext[i], key_num);
+       printf("%c", cypherletter);
+
+    }
 
 }
 
@@ -66,10 +71,17 @@ bool only_digits(string key)
 
 
 
-char rotate(char q, int i);
+char rotate(char letter, int number)
 {
+    if (number > 26)
+    {
+        for(int i = 1; number > 26; i++)
+        {
+            number = number - 26 * i;
+        }
+    }
+    char cypher = letter + number;
+    return cypher;
 
-
-    printf("%i", i);
 
 }
