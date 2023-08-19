@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     }
 
 
-    int key_num = atoi(string argv[1]);
+    int key_num = atoi(argv[1]);
 
 }
 
