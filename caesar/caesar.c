@@ -68,6 +68,8 @@ bool only_digits(string key)
 
     int rotate(char letter, int number);
     {
-
+        int number = 6;
+        int let = letter + 1;
+        return let;
     }
 }
