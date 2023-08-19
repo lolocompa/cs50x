@@ -32,7 +32,7 @@ int main(int argc, string argv[])
 
     int plain_lenght = strlen(plaintext);
 
-    printf("cyphertext: ");
+    printf("ciphertext: ");
 
     for(int i = 0; i < plain_lenght; i++)
     {
