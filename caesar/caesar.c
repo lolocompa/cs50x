@@ -70,7 +70,7 @@ bool only_digits(string key)
     {
 
 
-        printf("%i", q);
+        printf("%i", i);
 
     }
 }
