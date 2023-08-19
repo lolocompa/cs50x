@@ -90,5 +90,23 @@ char rotate(char letter, int number)
         char cypher = letter + number;
         return cypher;
     }
+    else if (letter < 91 && letter > 64)
+    {
+        int j = letter + number;
+        if (j > 122)
+        {
+            for(int i = 1; j > 122; i++)
+            {
+                number = number - 26 * i;
+                j = letter + number;
+            }
+        }
+        char cypher = letter + number;
+        return cypher;
+    }
+    else
+    {
+        return letter;
+    }
 
 }
