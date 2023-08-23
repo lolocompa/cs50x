@@ -1,11 +1,11 @@
-sort1 uses: TODO might be bouble
+sort1 uses: bouble sort
 
 How do you know?: TODO
 
-sort2 uses: TODO might be merge
+sort2 uses: merge sort
 
 How do you know?: TODO
 
-sort3 uses: TODO might be selectiom
+sort3 uses: selection sort
 
 How do you know?: TODO
