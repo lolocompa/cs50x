@@ -1,4 +1,4 @@
-sort1 uses: bouble sort
+sort1 uses: bubble sort
 
 How do you know?: TODO
 
