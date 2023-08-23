@@ -1,10 +1,10 @@
 sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: if we use a list that is already sorted, the lower boun 
 
 sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: we saw in lecture that merge sort was faster than both bubble sort and selection sort in sorting numbers in random order, so i executed each sort with random50000.txt and i found that sort2 was the fastest so it must be merge sort
 
 sort3 uses: selection sort
 
