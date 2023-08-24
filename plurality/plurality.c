@@ -77,7 +77,7 @@ int main(int argc, string argv[])
 
 bool vote(string name)
 {
-    for(int i = 0; i < candidate_count; i++,)
+    for(int i = 0; i < candidate_count; i++)
     {
         if (name == candidates[i].name)
         {
@@ -86,10 +86,13 @@ bool vote(string name)
 
 
         }
-
+        else
+        {
+            return 0;
+        }
     }
 
-
+    printf("hello");
 }
 
 
