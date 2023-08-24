@@ -86,10 +86,11 @@ bool vote(string name)
 
 
         }
-        
+
     }
 
-
+    printf("%s", name);
+    return 0;
 }
 
 
