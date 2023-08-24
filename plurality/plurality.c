@@ -87,7 +87,7 @@ bool vote(string name)
 
         }
     }
-
+    printf("%i",)
     return 0;
 
 }
