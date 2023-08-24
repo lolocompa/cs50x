@@ -88,8 +88,8 @@ bool vote(string name)
         }
     }
 
-    printf("hello");
-    
+    return 0;
+
 }
 
 
