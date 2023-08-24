@@ -110,10 +110,7 @@ void print_winner(void)
     int winner_count = 0;
     for(int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > candidates[i - 1].votes)
-        {
-            winner_count++;
-        }
+        
     }
     printf("winner: %i\n", winner_count);
 }
