@@ -77,20 +77,19 @@ int main(int argc, string argv[])
 
 bool vote(string name)
 {
-    int j = 1;
-    for(int i = 0; i < candidate_count; i++, j++)
+    for(int i = 0; i < candidate_count; i++,)
     {
         if (name == candidates[i].name)
         {
             candidates[i].votes++;
             return 1;
-            
+
 
         }
 
     }
 
-    return 0;
+
 }
 
 
