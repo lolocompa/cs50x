@@ -87,7 +87,7 @@ bool vote(string name)
 
         }
     }
-    printf("%i", candidate_count);
+    printf("%s", candidates[0].name);
     return 0;
 
 }
