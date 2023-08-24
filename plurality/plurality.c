@@ -75,7 +75,14 @@ int main(int argc, string argv[])
 
 bool vote(string name)
 {
-    strlen candidates)
+    int num_candidates = strlen(candidates);
+    for(int i = 0; i < num_candidates; i++)
+    {
+        if (name == candidates[i])
+        {
+            candidate
+        }
+    }
 
 }
 
