@@ -84,16 +84,13 @@ bool vote(string name)
         {
             candidates[i].votes++;
             return 1;
+            
 
-        }
-        else if (j == candidate_count)
-        {
-            return 0;
         }
 
     }
 
-
+    return 0;
 }
 
 
