@@ -118,4 +118,5 @@ void print_winner(void)
         }
     }
     printf("winner: %i\n", winner_count);
+    printf("%i", candidate_count);
 }
