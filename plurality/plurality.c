@@ -115,14 +115,13 @@ void print_winner(void)
             winner_count = i;
         }
     }
-    printf("winner_count: %i", winner_count);
     for(int j = 0; j < candidate_count; j++)
     {
-        if (candidates[j].votes == candidates[winner_count].votes)
+        if (candidates[j].votes == candidates[winner_count].votes && j != winner_count)
         {
-            printf("%s", candidates[j].name);
-            printf("%s", candidates[winner_count].name);
+            printf("%s\n", candidates[j].name);
 
         }
     }
+     printf("%s\n", candidates[winner_count].name);
 }
