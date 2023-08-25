@@ -126,7 +126,8 @@ int main(int argc, string argv[])
     }
     return 0;
 
-    
+    int l = preferences[0][0];
+    printf("%s\n", candidates[l].name);
 }
 
 
@@ -135,15 +136,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    for(int i = 0; i < candidate_count; i++)
-    {
-        if (strcmp(candidates[i].name, name) == 0)
-        {
-            preferences[voter][rank] = i;
-            return 1;
-        }
-    }
-    return 0;
+    return 1;
 }
 
 
