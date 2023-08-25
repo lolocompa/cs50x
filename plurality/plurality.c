@@ -108,7 +108,6 @@ bool vote(string name)
 void print_winner(void)
 {
     int winner_count = 0;
-    int same_votes = 10;
     int votes = candidates[0].votes;
     for(int i = 0; i < candidate_count; i++)
     {
@@ -117,21 +116,6 @@ void print_winner(void)
             votes = candidates[i].votes;
             winner_count = i;
         }
-        if (candidates[i].votes == votes)
-        {
-            same_votes = i;
-        }
     }
-    if (same_votes == winner_count)
-    {
-        printf("%s\n", candidates[winner_count].name);
-        printf("%s\n", candidates[same_votes].name);
-
-    }
-    else
-    {
-        printf("%s", candidates[winner_count].name);
-
-    }
-
+    for(int j = 0; j < candidate_count; j)
 }
