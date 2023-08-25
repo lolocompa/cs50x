@@ -126,8 +126,7 @@ int main(int argc, string argv[])
     }
     return 0;
 
-    int l = preferences[0][0];
-    printf("%s\n", candidates[l].name);
+    
 }
 
 
