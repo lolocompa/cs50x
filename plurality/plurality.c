@@ -119,7 +119,7 @@ void print_winner(void)
         }
         else if (candidates[i].votes == votes)
         {
-            same_votes = 
+            same_votes == i
         }
     }
     printf("winner: %i\n", winner_count);
