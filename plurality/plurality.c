@@ -122,6 +122,6 @@ void print_winner(void)
             same_votes == i
         }
     }
-    printf("winner: %i\n", winner_count);
+    if (sa)
 
 }
