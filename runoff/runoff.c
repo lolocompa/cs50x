@@ -85,6 +85,7 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+
     // Keep holding runoffs until winner exists
     while (true)
     {
@@ -126,8 +127,7 @@ int main(int argc, string argv[])
     }
     return 0;
 
-    int l = preferences[0][0];
-    printf("%s\n", candidates[l].name);
+
 }
 
 
