@@ -123,8 +123,7 @@ void print_winner(void)
         {
             printf("%s", candidates[j].name);
             printf("%s", candidates[winner_count].name);
-            return
-
+            
         }
     }
 }
