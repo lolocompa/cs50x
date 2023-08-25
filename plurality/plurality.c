@@ -117,5 +117,14 @@ void print_winner(void)
             winner_count = i;
         }
     }
-    for(int j = 0; j < candidate_count; j)
+    for(int j = 0; j < candidate_count; j++)
+    {
+        if (candidates[j].votes == candidates[winner_count].votes)
+        {
+            printf("%s", candidates[j].name);
+            printf("%s", candidates[winner_count].name);
+            return
+
+        }
+    }
 }
