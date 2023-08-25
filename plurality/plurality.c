@@ -108,6 +108,7 @@ bool vote(string name)
 void print_winner(void)
 {
     int winner_count = 0;
+    int same_votes = 0;
     int votes = candidates[0].votes;
     for(int i = 0; i < candidate_count; i++)
     {
