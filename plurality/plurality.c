@@ -60,7 +60,7 @@ int main(int argc, string argv[])
             printf("Invalid vote.\n");
         }
     }
-    
+
 
 
 
@@ -115,6 +115,7 @@ void print_winner(void)
             winner_count = i;
         }
     }
+    printf("winner_count: %i", winner_count);
     for(int j = 0; j < candidate_count; j++)
     {
         if (candidates[j].votes == candidates[winner_count].votes)
