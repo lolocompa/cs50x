@@ -125,7 +125,13 @@ int main(int argc, string argv[])
         }
     }
     return 0;
+
+    int l = preferences[0][0];
+    printf("%s\n", candidates[l].name);
 }
+
+
+
 
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
