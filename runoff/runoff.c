@@ -130,10 +130,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    for(int i = 0; i < voter_count; i++)
-    {
-        
-    }
+    
 }
 
 
