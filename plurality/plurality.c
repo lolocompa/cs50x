@@ -119,9 +119,19 @@ void print_winner(void)
         }
         else if (candidates[i].votes == votes)
         {
-            same_votes == i
+            same_votes = i;
         }
     }
-    if (sa)
+    if (same_votes == winner_count)
+    {
+        printf("%s\n", candidates[winner_count].name);
+        printf("%s\n", candidates[same_votes].name);
+
+    }
+    else
+    {
+        printf("%s", candidates[winner_count].name);
+
+    }
 
 }
