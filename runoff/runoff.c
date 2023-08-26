@@ -197,15 +197,19 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int less_votes = 0
-    int votes = candidates[0].votes
+    int less_votes = 0;
+    int votes = candidates[0].votes;
     for(int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes < votes)
         {
-            votes = candidates[i].votes
-            less_votes = i
+            votes = candidates[i].votes;
+            less_votes = i;
         }
+    }
+    for(int j = 0; j < candidate_count; j++)
+    {
+        if (candidates[j].votes)
     }
 }
 
