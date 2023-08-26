@@ -124,6 +124,7 @@ int main(int argc, string argv[])
         {
             candidates[i].votes = 0;
         }
+        printf("%i\n", candidates[0].votes);
     }
     return 0;
 
