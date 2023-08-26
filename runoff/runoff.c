@@ -164,6 +164,7 @@ void tabulate(void)
                 j++;
             }
         }
+        candidates[index_vote].vote++;
     }
 }
 
