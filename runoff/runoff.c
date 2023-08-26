@@ -217,8 +217,9 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
-    return false;
+    int max = 0
+    votes = candidates[0].votes
+    
 }
 
 // Eliminate the candidate (or candidates) in last place
