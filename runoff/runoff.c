@@ -219,7 +219,22 @@ bool is_tie(int min)
 {
     int max = 0
     votes = candidates[0].votes
-    
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > votes)
+        {
+            votes = candidates[i].votes;
+            max = i;
+        }
+    }
+    if( max == min)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 // Eliminate the candidate (or candidates) in last place
