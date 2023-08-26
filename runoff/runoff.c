@@ -207,10 +207,7 @@ int find_min(void)
             less_votes = i;
         }
     }
-    for(int j = 0; j < candidate_count; j++)
-    {
-        if (candidates[j].votes)
-    }
+    return candidates[less_votes].votes;
 }
 
 
