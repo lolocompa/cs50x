@@ -121,7 +121,7 @@ int main(int argc, string argv[])
         // Eliminate anyone with minimum number of votes
         eliminate(min);
         printf("%s\n", candidates[2].name);
-        printf("%s\n", candidates[1].name);
+        printf("%i\n", candidates[2].votes);
 
 
         // Reset vote counts back to zero
