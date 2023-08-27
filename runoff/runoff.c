@@ -162,7 +162,7 @@ void tabulate(void)
     {
         int j = 0;
         int index_vote = preferences[i][j];
-        while (strcmp(candidates[index_vote].name, "eliminated") == 0)
+        while (candidates[index_vote].eliminated == true)
         {
             j++;
             index_vote = preferences[i][j];
@@ -199,14 +199,14 @@ int find_min(void)
     int less_votes = 0;
     int l = 0;
     int votes = candidates[l].votes;
-    while (strcmp(candidates[l].name, "eliminated") == 0)
+    while (candidates[l].eliminated == true)
     {
         l++;
         votes = candidates[l].votes;
     }
     for(int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < votes && strcmp(candidates[i].name, "eliminated") != 0)
+        if (candidates[i].votes < votes && candidates[i].eliminated == false)
         {
             votes = candidates[i].votes;
             less_votes = i;
@@ -250,7 +250,7 @@ void eliminate(int min)
     {
         if (candidates[i].votes == min)
         {
-            candidates[i].name ="eliminated";
+            candidates[i].eliminated = true;
         }
     }
 }
