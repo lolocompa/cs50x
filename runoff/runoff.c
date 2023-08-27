@@ -163,13 +163,7 @@ void tabulate(void)
     {
         int j = 0;
         int index_vote = preferences[i][j];
-        for(int k = 0; k < candidate_count; k++)
-        {
-            if (strcmp(candidates[index_vote].name,"eliminated") == 0)
-            {
-                j++;
-            }
-        }
+        while (strcmp(candidates[index_votes].name, "eliminated") == 0)
         candidates[index_vote].votes++;
     }
 }
