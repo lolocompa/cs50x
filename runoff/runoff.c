@@ -120,7 +120,7 @@ int main(int argc, string argv[])
 
         // Eliminate anyone with minimum number of votes
         eliminate(min);
-        
+
 
 
         // Reset vote counts back to zero
@@ -165,6 +165,7 @@ void tabulate(void)
         while (strcmp(candidates[index_vote].name, "eliminated") == 0)
         {
             j++;
+            index_vote = preferences[i][j];
         }
         candidates[index_vote].votes++;
     }
