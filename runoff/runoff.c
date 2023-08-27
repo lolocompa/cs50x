@@ -163,7 +163,10 @@ void tabulate(void)
     {
         int j = 0;
         int index_vote = preferences[i][j];
-        while (strcmp(candidates[index_votes].name, "eliminated") == 0)
+        while (strcmp(candidates[index_vote].name, "eliminated") == 0)
+        {
+            j++;
+        }
         candidates[index_vote].votes++;
     }
 }
