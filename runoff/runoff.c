@@ -197,16 +197,16 @@ bool print_winner(void)
 int find_min(void)
 {
     int less_votes = 0;
-    int l = 0
+    int l = 0;
     int votes = candidates[l].votes;
     while (strcmp(candidates[l].name, "eliminated") == 0)
     {
-        l++
+        l++;
         votes = candidates[l].votes;
     }
     for(int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < votes )
+        if (candidates[i].votes < votes && strcmp(candidates[i].name, "eliminated") != 0)
         {
             votes = candidates[i].votes;
             less_votes = i;
