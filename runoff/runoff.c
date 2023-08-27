@@ -227,7 +227,7 @@ bool is_tie(int min)
             max = i;
         }
     }
-    if( max == min)
+    if(candidates[max].votes == min)
     {
         return 1;
     }
