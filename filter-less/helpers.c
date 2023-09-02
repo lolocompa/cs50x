@@ -8,7 +8,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
 
-            BYTE avereage = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)/3 + 0.5;
+            BYTE avereage = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)/3;
+            avereage = avereage + 0.5;
             image[i][j].rgbtRed = avereage;
             image[i][j].rgbtGreen = avereage;
             image[i][j].rgbtBlue = avereage;
