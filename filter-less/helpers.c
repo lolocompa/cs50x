@@ -33,7 +33,16 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     int sepia[3];
-    for
+    for (int i = 0; i < height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
+            int original_red = image[i][j].rgbtRed
+            int original_green = image[i][j].rgbtGreen
+            int original_blue = image[i][j].rgbtBlue
+            
+        }
+    }
 }
 
 
