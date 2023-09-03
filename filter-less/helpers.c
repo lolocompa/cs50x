@@ -37,10 +37,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            int original_red = image[i][j].rgbtRed
-            int original_green = image[i][j].rgbtGreen
-            int original_blue = image[i][j].rgbtBlue
-            
+            int original_red = image[i][j].rgbtRed;
+            int original_green = image[i][j].rgbtGreen;
+            int original_blue = image[i][j].rgbtBlue;
+
+            sepia[0] =
         }
     }
 }
