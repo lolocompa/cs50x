@@ -121,7 +121,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for(int g = -1; g <= 1; g++)
                 {
                     int height_index = i + k;
-                    int width_index = i + g;
+                    int width_index = j + g;
                     if (0 <= height_index && height_index < height && 0 <= width_index && width_index < width)
                     {
                         int red = copy[height_index][width_index].rgbtRed;
