@@ -141,9 +141,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float newgreen = avereage_green/count;
             float newblue = avereage_blue/count;
 
-            newred = newred + 0.5;
-            newblue = newblue + 0.5;
-            newgreen = newgreen + 0.5;
+            newred = round(newred);
+            newblue = round(newblue);
+            newgreen = round(newgreen);
 
             image[i][j].rgbtRed = newred;
             image[i][j].rgbtGreen = newgreen;
