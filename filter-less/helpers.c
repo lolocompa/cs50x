@@ -125,7 +125,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     width_index++;
 
-                    while(height_index > 0 && height_index < height && width_index < width && width_index > 0)
+                    while(height_index > 0 && height_index <= height && width_index <= width && width_index > 0)
                     {
                         int red = copy[height_index][width_index].rgbtRed;
                         int green = copy[height_index][width_index].rgbtGreen;
