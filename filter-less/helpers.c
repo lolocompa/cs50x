@@ -135,6 +135,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         avereage_green = avereage_green + green;
                         avereage_blue = avereage_blue + blue;
                     }
+
                 }
             }
 
