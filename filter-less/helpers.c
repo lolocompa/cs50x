@@ -125,14 +125,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     width_index++;
 
-                    int red = copy[height_index][width_index].rgbtRed;
-                    int green = copy[height_index][width_index].rgbtGreen;
-                    int blue = copy[height_index][width_index].rgbtBlue;
+                    while(height_index > 0 && height_index < height && width_index < width && width_index > 0)
+                    {
+                        int red = copy[height_index][width_index].rgbtRed;
+                        int green = copy[height_index][width_index].rgbtGreen;
+                        int blue = copy[height_index][width_index].rgbtBlue;
 
-                    avereage_red = avereage_red + red;
-                    avereage_green = avereage_green + green;
-                    avereage_blue = avereage_blue + blue;
-
+                        avereage_red = avereage_red + red;
+                        avereage_green = avereage_green + green;
+                        avereage_blue = avereage_blue + blue;
+                    }
                 }
             }
 
