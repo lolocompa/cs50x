@@ -114,6 +114,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int avereage_red = 0;
             int avereage_green = 0;
             int avereage_blue = 0;
+            int count = 0;
 
             for(int k = -1; k <= 1; k++)
             {
@@ -131,14 +132,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         avereage_red = avereage_red + red;
                         avereage_green = avereage_green + green;
                         avereage_blue = avereage_blue + blue;
+                        count++;
                     }
 
                 }
             }
 
-            image[i][j].rgbtRed = avereage_red;
-            image[i][j].rgbtGreen = avereage_green;
-            image[i][j].rgbtBlue = avereage_blue;
+            image[i][j].rgbtRed = avereage_red/count;
+            image[i][j].rgbtGreen = avereage_green/count;
+            image[i][j].rgbtBlue = avereage_blue/count;
         }
     }
 }
