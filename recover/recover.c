@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     BYTE buffer[block];
     int file_count = 000;
     BYTE j = 0xff;
-    
+    BYTE i = j/2;
 
     while (fread(buffer, 1, block, forensic) == block)
     {
