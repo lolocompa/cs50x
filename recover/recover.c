@@ -23,10 +23,12 @@ int main(int argc, char *argv[])
 
     int block = 512;
     BYTE buffer[block];
+    int file_count = 000;
+    printf("%i", file_count);
 
     while (fread(buffer, 1, block, forensic) == block)
     {
-        
+
     }
 
 }
