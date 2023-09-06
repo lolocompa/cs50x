@@ -22,6 +22,6 @@ int main(int argc, char *argv[])
     }
 
     int block = 512;
-    BYTE buffer[block]
+    uint8_t buffer[block];
 
 }
