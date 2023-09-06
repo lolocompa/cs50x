@@ -11,5 +11,13 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    fopen
+    FILE *forensic = fopen(argv[1]; "r");
+
+    if (forensic == NULL)
+    {
+        printf("cant open file")
+        return 1;
+    }
+
+    
 }
