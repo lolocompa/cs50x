@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, block, forensic) == block)
     {
-        
+        uint8_t
     }
 
 }
