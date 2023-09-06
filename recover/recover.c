@@ -24,11 +24,15 @@ int main(int argc, char *argv[])
     int block = 512;
     BYTE buffer[block];
     int file_count = 000;
-    printf("%i", file_count);
 
     while (fread(buffer, 1, block, forensic) == block)
     {
+        BYTE first = buffer[0]
+        BYTE second = buffer[1]
+        BYTE third = buffer[2]
+        BYTE fourth = buffer[3]
 
+        if (first == 0xff)
     }
 
 }
