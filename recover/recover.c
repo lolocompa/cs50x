@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int block = 512
-    
+    int block = 512;
+    BYTE buffer[block]
+
 }
