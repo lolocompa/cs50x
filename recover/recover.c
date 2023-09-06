@@ -22,11 +22,11 @@ int main(int argc, char *argv[])
     }
 
     int block = 512;
-    uint8_t buffer[block];
+    BYTE buffer[block];
 
     while (fread(buffer, 1, block, forensic) == block)
     {
-        uint8_t
+        
     }
 
 }
