@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         BYTE third = buffer[2]
         BYTE fourth = buffer[3]
 
-        if (first == 0xff)
+        if (first == 0xff )
     }
 
 }
