@@ -1,23 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
-    typedef uint8_t BYTE;
 
     if (argc != 2)
     {
-        printf("only 2 command line arguments")
+        printf("only 2 command line arguments\n");
         return 1;
     }
 
-    FILE *forensic = fopen(argv[1]; "r");
+    FILE *forensic = fopen(argv[1], "r");
 
     if (forensic == NULL)
     {
-        printf("cant open file")
+        printf("cant open file\n");
         return 1;
     }
 
+    int block = 512
     
 }
