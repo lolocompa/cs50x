@@ -37,6 +37,8 @@ int main(int argc, char *argv[])
 
         if (first == 0xff && second == 0xd8 && third == 0xff && (fourth & 0xf0) == 0xe0)
         {
+            sprintf(file_name, "%03d.jpeg", file_count);
+
             FILE *images = fopen(file_name "w");
             fclose(file_name);
 
