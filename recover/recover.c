@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
     BYTE buffer[block];
     int file_count = 000;
     char file_name[9];
+    FILE *images = NULL;
 
     while (fread(buffer, 1, block, forensic) == block)
     {
@@ -39,9 +40,14 @@ int main(int argc, char *argv[])
         {
             sprintf(file_name, "%03d.jpeg", file_count);
 
-            FILE *images = fopen(file_name, "w");
+            images = fopen(file_name, "w");
 
 
         }
+        if (images != NULL)
+        {
+            fwrite(buffer,1,block,images);
+        }
 
+    }
 }
