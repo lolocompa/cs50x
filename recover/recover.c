@@ -34,11 +34,10 @@ int main(int argc, char *argv[])
         BYTE third = buffer[2];
         BYTE fourth = buffer[3];
 
-        FILE *images
 
         if (first == 0xff && second == 0xd8 && third == 0xff && (fourth & 0xf0) == 0xe0)
         {
-
+            FILE *images = 
             fclose(file_name.jpeg);
 
         }
