@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         BYTE third = buffer[2];
         BYTE fourth = buffer[3];
 
-        unsigned char = fourth & 0xf0;
+        unsigned char = buffer[3] & 0xf0;
 
         if (first == 0xff && second == 0xd8 && third == 0xff && fourth == 0xe0)
         {
