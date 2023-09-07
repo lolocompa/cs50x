@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
             sprintf(file_name, "%03d.jpeg", file_count);
 
             images = fopen(file_name, "w");
+            file_count++;
 
 
         }
