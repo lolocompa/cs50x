@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
             FILE *images = fopen(file_name, "w");
 
         }
+        
     }
 
 }
