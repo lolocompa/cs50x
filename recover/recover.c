@@ -24,8 +24,6 @@ int main(int argc, char *argv[])
     int block = 512;
     BYTE buffer[block];
     int file_count = 000;
-    BYTE j = 0xe2;
-    uint8_t(j);
 
     while (fread(buffer, 1, block, forensic) == block)
     {
@@ -33,6 +31,8 @@ int main(int argc, char *argv[])
         BYTE second = buffer[1];
         BYTE third = buffer[2];
         BYTE fourth = buffer[3];
+
+        
 
         if (first == 0xff && second == 0xd8 && third == 0xff && fourth/2 == 0xe)
         {
