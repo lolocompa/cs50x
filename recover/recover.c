@@ -39,8 +39,7 @@ int main(int argc, char *argv[])
         {
             sprintf(file_name, "%03d.jpeg", file_count);
 
-            FILE *images = fopen(file_name "w");
-            fclose(file_name);
+            FILE *images = fopen(file_name, "w");
 
         }
     }
