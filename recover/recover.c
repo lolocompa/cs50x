@@ -42,7 +42,10 @@ int main(int argc, char *argv[])
             FILE *images = fopen(file_name, "w");
 
         }
-        
+        if (images != NULL)
+        {
+            fwrite(buffer, 1, block, images);
+        }
     }
 
 }
