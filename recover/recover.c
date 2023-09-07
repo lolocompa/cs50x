@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
 
         if (first == 0xff && second == 0xd8 && third == 0xff && (fourth & 0xf0) == 0xe0)
         {
-            FILE *images = fopen("%s.jpeg", file_name "w");
-            fclose(file_name.jpeg);
+            FILE *images = fopen(file_name "w");
+            fclose(file_name);
 
         }
     }
