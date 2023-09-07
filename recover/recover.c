@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     int block = 512;
     BYTE buffer[block];
     int file_count = 000;
-    char file_name[8];
+    string file_name[8];
 
     while (fread(buffer, 1, block, forensic) == block)
     {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
         if (first == 0xff && second == 0xd8 && third == 0xff && (fourth & 0xf0) == 0xe0)
         {
-            FILE *images = 
+            FILE *images = fopen("%s.jpeg", file_name "w");
             fclose(file_name.jpeg);
 
         }
