@@ -53,9 +53,9 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer,1,block,images);
         }
+        free(buffer);
 
     }
-    free(buffer);
     if (images != NULL)
     {
         fclose(imnages);
