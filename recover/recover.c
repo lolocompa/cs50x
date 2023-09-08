@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     int block = 512;
     BYTE buffer[block];
     int file_count = 000;
-    char file_name[9];
+    char file_name[8];
     FILE *images = NULL;
 
     while (fread(buffer, 1, block, forensic) == block)
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
             {
                 fclose(images);
             }
-            sprintf(file_name, "%03d.jpeg", file_count);
+            sprintf(file_name, "%03d.jpg", file_count);
 
             images = fopen(file_name, "w");
             file_count++;
