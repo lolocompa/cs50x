@@ -53,11 +53,12 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer,1,block,images);
         }
-        free(buffer);
 
     }
     if (images != NULL)
     {
-        fclose(imnages);
+        fclose(images);
     }
+
+    fclose(forensic);
 }
