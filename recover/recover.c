@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *forensic = fopen(argv[1], "r");
+    FILE *forensic = fopen(argv[1], "rb");
 
     if (forensic == NULL)
     {
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             }
             sprintf(file_name, "%03d.jpg", file_count);
 
-            images = fopen(file_name, "w");
+            images = fopen(file_name, "wb");
             file_count++;
 
 
