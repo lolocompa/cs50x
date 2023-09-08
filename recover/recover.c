@@ -55,5 +55,9 @@ int main(int argc, char *argv[])
         }
 
     }
-    free(buffer)
+    free(buffer);
+    if (images != NULL)
+    {
+        fclose(imnages);
+    }
 }
