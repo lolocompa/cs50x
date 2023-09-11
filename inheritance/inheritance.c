@@ -136,7 +136,7 @@ void free_family(person *p)
 
     person *ptr = p;
 
-    person *tmp1 = ptr->parents[0]->parents[0];
+    person *tmp1 = ptr->parents[0]->parents;
     person *tmp2 = ptr
 
     free(ptr->parents[0]);
