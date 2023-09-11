@@ -139,7 +139,6 @@ void free_family(person *p)
 
 
     free(p);
-    free(p);
 
     free_family(ptr0);
     free_family(ptr1);
@@ -148,7 +147,7 @@ void free_family(person *p)
 
 
     // TODO: Free child
-    
+
 
 }
 
