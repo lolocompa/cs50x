@@ -70,7 +70,7 @@ person *create_family(int generations)
         int r = rand() % 2;
         if (r == 0)
         {
-            human->alleles[0] = 
+            human->alleles[0] = parent0->
         }
 
 
