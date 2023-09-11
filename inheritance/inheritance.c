@@ -134,6 +134,7 @@ void free_family(person *p)
 
     // TODO: Free parents recursively
     
+
     person *p1 = p->parents[0]
     person *p2 = p->parents[1]
 
