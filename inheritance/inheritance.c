@@ -80,8 +80,9 @@ person *create_family(int generations)
 
 
         // TODO: Randomly assign alleles
-        human->alleles[0] = random_allele;
-        human->alleles[1] = random_allele;
+        human->alleles[0] = random_allele();
+        human->alleles[1] = random_allele();
+        printf("%c\n", human->alleles[0]);
 
     }
 
