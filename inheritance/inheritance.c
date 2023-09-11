@@ -140,11 +140,11 @@ void free_family(person *p)
     person *tmp1 = ptr0;
     person *tmp2 = ptr1;
 
-    free(ptr0);
-    free(ptr1);
-
     free_family(tmp1);
     free_family(tmp2);
+
+    free(ptr0);
+    free(ptr1);
 
 
 
