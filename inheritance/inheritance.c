@@ -70,21 +70,21 @@ person *create_family(int generations)
         int r = rand() % 2;
         if (r == 0)
         {
-            human->alleles[0] = parent0->alleles[0]
+            human->alleles[0] = parent0->alleles[0];
         }
         else
         {
-            human->allels[0] = parent0->allels[1]
+            human->alleles[0] = parent0->alleles[1];
         }
 
         int s = rand() % 2;
         if (s == 0)
         {
-            human->alleles[1] = parent1->alleles[0]
+            human->alleles[1] = parent1->alleles[0];
         }
         else
         {
-            human->alleles[1] = parents1->alleles[1]
+            human->alleles[1] = parent1->alleles[1];
         }
 
 
@@ -106,7 +106,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return ;
+    return human;
 }
 
 
