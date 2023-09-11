@@ -141,8 +141,6 @@ void free_family(person *p)
     free(p->parents[0]);
     free(p->parents[1]);
 
-    free_family(p1);
-    free_family(p2);
 
 
 
