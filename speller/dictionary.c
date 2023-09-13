@@ -1,5 +1,6 @@
 // Implements a dictionary's functionality
 
+#include <string.h>
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -54,7 +55,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while (strcmp(fscanf(dic, "%s", word), EOS) != 0)
+    while (strcmp(fscanf(dic, "%s", word), "EOS") != 0)
     {
 
     }
