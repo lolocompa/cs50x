@@ -49,7 +49,7 @@ bool load(const char *dictionary)
 {
     FILE *dic = fopen("dictionary", "r");
     char word[LENGTH + 1];
-    int read
+    int read;
 
     if (dic == NULL)
     {
