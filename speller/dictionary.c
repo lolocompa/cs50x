@@ -60,7 +60,7 @@ bool load(const char *dictionary)
     {
         return 1;
     }
-    return 1;
+    return 0;
 }
 
 
