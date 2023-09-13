@@ -48,7 +48,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *dic = fopen(dictionary, "r");
-    char word[LENGTH + 1];
+    char *word[LENGTH + 1];
 
     if (dic == NULL)
     {
@@ -63,7 +63,7 @@ bool load(const char *dictionary)
             return 0;
         }
 
-        char *location = &word[0];
+        const char *location = &word[0];
         strcpy(n->word, *location);
     }
 
