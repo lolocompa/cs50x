@@ -47,7 +47,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *dic = fopen("dictionary", "r");
-    string word[];
+    char word[LENGTH + 1];
 
     if (dic == NULL)
     {
