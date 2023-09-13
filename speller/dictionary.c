@@ -2,7 +2,10 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <cs50.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
