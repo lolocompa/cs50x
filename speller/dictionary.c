@@ -54,7 +54,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while (fscanf(dic, "%s", word) != EOS)
+    while (strcmp(fscanf(dic, "%s", word), EOS) != 0)
     {
 
     }
