@@ -49,18 +49,19 @@ bool load(const char *dictionary)
 {
     FILE *dic = fopen(dictionary, "r");
     char word[LENGTH + 1];
-    int read;
 
     if (dic == NULL)
     {
         return false;
     }
 
-    while ((read = fscanf(dic, "%s", word) != EOF))
+    while (fscanf(dic, "%s", word) != EOF)
     {
-        return 1;
+
     }
-    return 0;
+
+    fclose(dic);
+    return 1;
 }
 
 
