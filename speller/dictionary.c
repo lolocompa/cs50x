@@ -47,12 +47,17 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *dic = fopen("dictionary", "r");
+    string word[];
+
     if (dic == NULL)
     {
         return false
     }
 
-    while ()
+    while (fscanf(dic, "%s", word) != NULL)
+    {
+
+    }
 }
 
 
