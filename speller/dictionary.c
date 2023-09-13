@@ -56,10 +56,11 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while ((read = fscanf(dic, "%s", word) != EOS))
+    while ((read = fscanf(dic, "%s", word) != EOF))
     {
-
+        return 1;
     }
+    return 1;
 }
 
 
