@@ -51,10 +51,10 @@ bool load(const char *dictionary)
 
     if (dic == NULL)
     {
-        return false
+        return false;
     }
 
-    while (fscanf(dic, "%s", word) != NULL)
+    while (fscanf(dic, "%s", word) != "EOS")
     {
 
     }
