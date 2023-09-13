@@ -52,7 +52,7 @@ bool load(const char *dictionary)
         return false
     }
 
-    
+    while ()
 }
 
 
