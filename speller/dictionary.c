@@ -63,7 +63,8 @@ bool load(const char *dictionary)
             return 0;
         }
 
-        strcpy(n->word, word[]);
+        char *location = &word[0];
+        strcpy(n->word, *location);
     }
 
     fclose(dic);
