@@ -9,6 +9,8 @@
 #include <cs50.h>
 #include "dictionary.h"
 
+int hashing_times = 0;
+
 // Represents a node in a hash table
 typedef struct node
 {
@@ -77,6 +79,7 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         int index = hash(n->word);
+        hashing_times++;
 
         n->next = table[index];
         table[index] = n;
