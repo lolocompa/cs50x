@@ -37,7 +37,12 @@ node *table[N];
 bool check(const char *word)
 {
     int index = hash(word);
-    
+    node *cursor = table[index]
+
+    while (cursor != NULL)
+    {
+        
+    }
 }
 
 
