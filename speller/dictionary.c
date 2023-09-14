@@ -1,4 +1,5 @@
 // Implements a dictionary's functionality
+#include <strings.h>
 
 #include <string.h>
 #include <ctype.h>
