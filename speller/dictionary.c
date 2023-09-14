@@ -37,12 +37,18 @@ node *table[N];
 bool check(const char *word)
 {
     int index = hash(word);
-    node *cursor = table[index]
+    node *cursor = table[index];
 
     while (cursor != NULL)
     {
-        
+        int is_in = strcasecmp(word, cursor->word);
+        if (is_in == 0)
+        {
+            return true;
+        }
+        cursor = cursor->next;
     }
+    return false;
 }
 
 
