@@ -33,7 +33,9 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    char *lower_word = tolower(*word);
+    const char lower_word = tolower(*word);
+
+    char l = lower_word[0];
 }
 
 
