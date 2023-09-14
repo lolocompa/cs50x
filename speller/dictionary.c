@@ -34,11 +34,17 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int length = strlen(word);
+    char lower_word[length];
     for(int i = 0; i < length; i++)
     {
-        char new_word = tolower(word[i]);
-        word[i] = new_word;
+        lower_word[i] = tolower(word[i]);
     }
+
+    int first_term = (lower_word[0] - 97) * 26;
+    int second_term = lower_word[1] - 97;
+
+    int index = first_term + second_term;
+    return index;
 }
 
 
