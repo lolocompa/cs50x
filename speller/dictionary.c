@@ -41,6 +41,7 @@ unsigned int hash(const char *word)
     {
         lower_word[i] = tolower(word[i]);
     }
+    lower_word[length] = '\0';
 
     int first_term = (lower_word[0] - 97) * 26;
     int second_term = lower_word[1] - 97;
