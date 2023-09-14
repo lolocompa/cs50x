@@ -136,6 +136,12 @@ unsigned int size(void)
     return hashing_times;
 }
 
+
+
+
+
+
+
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
