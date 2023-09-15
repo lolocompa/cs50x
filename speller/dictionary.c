@@ -21,7 +21,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 17576;
+const unsigned int N = 17577;
 
 // Hash table
 node *table[N];
@@ -67,8 +67,7 @@ unsigned int hash(const char *word)
     int length = strlen(word);
     if (length < 3)
     {
-        word[length + 1] = ' ';
-        word[length + 2] = ' ';
+        return 17577;
     }
     char lower_word[length];
     for(int i = 0; i < length; i++)
@@ -150,7 +149,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    for(int i = 0; i < 17576; i++)
+    for(int i = 0; i < 17577; i++)
     {
         node *cursor = table[i];
 
