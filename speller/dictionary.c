@@ -65,6 +65,11 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int length = strlen(word);
+    if (length < 3)
+    {
+        word[length + 1] = ' ';
+        word[length + 2] = ' ';
+    }
     char lower_word[length];
     for(int i = 0; i < length; i++)
     {
