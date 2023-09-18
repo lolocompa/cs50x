@@ -46,7 +46,8 @@ def main():
 
     for i in range(N):
         winner = simulate_tournament(teams)
-        
+        if "portugal" in counts:
+            print(counts["portugal"])
 
 
 
