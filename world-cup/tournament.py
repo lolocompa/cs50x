@@ -26,7 +26,8 @@ def main():
 
     file_reader = csv.DictReader(file)
 
-    print(file_reader)
+    for row in file_reader:
+        print(file_reader)
 
 
 
