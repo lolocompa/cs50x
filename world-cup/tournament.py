@@ -14,9 +14,28 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
+
+
+
+
+
     teams = []
     # TODO: Read teams into memory from file
-    
+
+    file = open(sys.argv[1], "r")
+
+    file_reader = csv.DictReader(file)
+
+    print(file_reader)
+
+
+
+
+
+
+
+
+
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
