@@ -37,15 +37,6 @@ def main():
 
 
 
-
-    team_names = list()
-    for t in range(len(teams)):
-        j = teams[t]
-        name = j["team"]
-        team_names.append(name)
-    print(team_names)
-
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
