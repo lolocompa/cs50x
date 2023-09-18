@@ -24,13 +24,13 @@ def main():
 
     file = open(sys.argv[1], "r")
 
-    
+
     file_reader = csv.DictReader(file)
 
     for row in file_reader:
-        rating = row[]
-        rating = int(rating)
-        print(row)
+        row["rating"] = int(row["rating"])
+        teams.append(row)
+    
 
 
 
