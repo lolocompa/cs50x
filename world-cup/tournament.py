@@ -46,7 +46,7 @@ def main():
 
     for i in range(N):
         winner = simulate_tournament(teams)
-        
+
 
 
 
@@ -99,7 +99,7 @@ def simulate_tournament(teams):
 
     while len(teams) != 1:
         teams = simulate_round(teams)
-    return teams
+    return teams["team"]
 
 
 
