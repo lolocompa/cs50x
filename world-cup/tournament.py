@@ -27,6 +27,7 @@ def main():
     file_reader = csv.DictReader(file)
 
     for row in file_reader:
+        row[uruguay] = int(row[team])
         print(row)
 
 
