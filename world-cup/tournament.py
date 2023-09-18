@@ -38,7 +38,7 @@ def main():
 
 
     counts = {
-        teams["team"]: 0
+        teams
     }
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
