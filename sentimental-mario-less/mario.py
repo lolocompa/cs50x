@@ -12,4 +12,9 @@ dot = height
 hash = 0
 
 for n in range(height):
-    
+    dot -= 1
+    n += 1
+    for j in range(dot):
+        print(".")
+    for k in range(hash):
+        print("#")
