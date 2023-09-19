@@ -11,4 +11,5 @@ while True:
 dot = height
 hash = 0
 
-for 
+for n in range(height):
+    
