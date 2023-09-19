@@ -12,4 +12,4 @@ Questions:
 Which predictions, if any, proved incorrect as you increased the number of simulations?: as we increase the number of simulation we will have more accuracy in the prediction, but this has a cost, whis is that we will need more time to run our program
 
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?: it depends on what you define as "good enough", as we are charged a fee for each second we should find a balance between the fee that we are charged and the accuracy our program is going to have
