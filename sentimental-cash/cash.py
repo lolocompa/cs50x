@@ -46,3 +46,8 @@ def calculate_quarters(cents):
             break
         qua += 1
     return qua
+
+
+
+
+main()
