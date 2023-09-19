@@ -15,6 +15,7 @@ for n in range(height):
     dot -= 1
     n += 1
     for j in range(dot):
-        print(".")
+        print(".", end="")
     for k in range(hash):
-        print("#")
+        print("#", end="")
+    print()
