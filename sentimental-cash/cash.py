@@ -1,3 +1,6 @@
+import cs50
+
+
 def main():
     cents = get_cents()
 
@@ -16,6 +19,20 @@ def main():
     coins = quarters + dimes + cents + pennies
 
     pribnt(f"{coins}")
+
+
+
+
+
+
+
+def get_cents():
+    while True:
+        c = cs50.get_float("cents: ")
+        if c > 0:
+            break
+
+
 
 
 
