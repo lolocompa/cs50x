@@ -8,3 +8,7 @@ while True:
         break
 
 
+dot = height
+hash = 0
+
+for 
