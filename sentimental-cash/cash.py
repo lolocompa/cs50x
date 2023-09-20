@@ -11,10 +11,10 @@ def main():
     cents = cents - dimes * 0.10
 
     nickels = calculate_nickels(cents)
-    cents = cents - nickels * 0.5
+    cents = cents - nickels * 0.05
 
     pennies = calculate_pennies(cents)
-    cents = cents - pennies * 0.1
+    cents = cents - pennies * 0.01
 
     coins = quarters + dimes + nickels + pennies
 
