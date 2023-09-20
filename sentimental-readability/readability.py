@@ -39,7 +39,7 @@ def count_letters(text):
         let = let.lower()
         if let < 97:
             puntuation += 1
-    let = length - puntuation
+    lete = length - puntuation
     return let
 
 main()
