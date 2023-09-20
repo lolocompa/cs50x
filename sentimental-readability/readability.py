@@ -36,6 +36,7 @@ def count_letters(text):
     length = len(text)
     puntuation = 0
     for let in range(length):
+        let = str(let)
         if let.lower() < 97:
             puntuation += 1
     lete = length - puntuation
