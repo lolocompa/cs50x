@@ -25,7 +25,7 @@ def main():
     elif grade < 1:
         print("before grade 1")
     else:
-        print(f"grade {grade}")
+        print(f"Grade {grade}")
 
 
 
