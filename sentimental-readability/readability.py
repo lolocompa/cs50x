@@ -18,7 +18,7 @@ def main():
     l = letters / words * 100
     s = wor * 100
     index = 0.0588 * l - 0.296 * s - 15.8
-    grade = index + 0.5
+    grade = round(index)
 
     if grade > 16:
         print("grade 16+")
