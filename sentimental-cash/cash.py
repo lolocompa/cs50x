@@ -18,7 +18,7 @@ def main():
 
     coins = quarters + dimes + cents + pennies
 
-    pribnt(f"{coins}")
+    print(f"{coins}")
 
 
 
@@ -63,7 +63,7 @@ def calculate_dimes(cents):
 
 
 
-def calculate_nickels(cent):
+def calculate_nickels(cents):
     nic = 0
     while True:
         cents = cents - 0.05
