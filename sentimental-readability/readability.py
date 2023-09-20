@@ -9,9 +9,9 @@ def main():
     sentences= 0
     words = 1
     for letter in range(len_text):
-        if letter == 32:
+        if letter == ' ':
             words += 1
-        elif letter == 46 or letter == 33 or letter == 63:
+        elif letter == '.' or letter == '?' or letter == '!':
             sentences +=1
 
     wor = sentences / words
