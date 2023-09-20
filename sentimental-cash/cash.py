@@ -16,7 +16,7 @@ def main():
     pennies = calculate_pennies(cents)
     cents = cents - pennies * 0.1
 
-    coins = quarters + dimes + cents + pennies
+    coins = quarters + dimes + nickels + pennies
 
     print(f"{coins}")
 
