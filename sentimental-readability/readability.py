@@ -8,7 +8,7 @@ def main():
 
     sentences= 0
     words = 1
-    for letter in range(len_text):
+    for letter in text:
         if letter == ' ':
             words += 1
         elif letter == '.' or letter == '?' or letter == '!':
