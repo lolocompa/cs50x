@@ -21,9 +21,9 @@ def main():
     grade = round(index)
 
     if grade > 16:
-        print("grade 16+")
+        print("Grade 16+")
     elif grade < 1:
-        print("before grade 1")
+        print("Before Grade 1")
     else:
         print(f"Grade {grade}")
 
