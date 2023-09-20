@@ -41,11 +41,33 @@ def calculate_quarters(cents):
 
     qua = 0
     while True:
-        n = cents - 25
-        if n < 0:
+        cents = cents - 25
+        if cents < 0:
             break
         qua += 1
     return qua
+
+
+
+def calculate_dimes(cents):
+
+
+
+
+
+
+
+
+
+def calculate_nickels(cents):
+
+
+
+
+
+
+
+def calculate
 
 
 
