@@ -31,6 +31,7 @@ def get_cents():
         c = cs50.get_float("cents: ")
         if c > 0:
             break
+    c = float(c)
     return c
 
 
