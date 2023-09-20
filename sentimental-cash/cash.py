@@ -38,11 +38,11 @@ def get_cents():
 
 
 def calculate_quarters(cents):
-
+    x = cents
     qua = 0
     while True:
-        cents = cents - 0.25
-        if cents < 0:
+        x = x - 0.25
+        if x < 0:
             break
         qua += 1
     return qua
@@ -50,10 +50,11 @@ def calculate_quarters(cents):
 
 
 def calculate_dimes(cents):
+    y = cents
     dim = 0
     while True:
-        cents = cents - 0.10
-        if cents < 0:
+        y = y - 0.10
+        if y < 0:
             break
         dim += 1
     return dim
@@ -64,10 +65,11 @@ def calculate_dimes(cents):
 
 
 def calculate_nickels(cents):
+    z = cents
     nic = 0
     while True:
-        cents = cents - 0.05
-        if cents <  0:
+        z = z - 0.05
+        if z <  0:
             break
         nic += 1
     return nic
@@ -79,10 +81,11 @@ def calculate_nickels(cents):
 
 
 def calculate_pennies(cents):
+    e = cents
     pen = 0
     while True:
-        cents = cents - 0.01
-        if cents < 0:
+        e = e - 0.01
+        if e < 0:
             break
         pen += 1
     return pen
