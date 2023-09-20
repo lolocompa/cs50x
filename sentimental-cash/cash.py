@@ -6,15 +6,20 @@ def main():
 
     quarters = calculate_quarters(cents)
     cents = cents - quarters * 0.25
+    cents = round(cents,2)
 
     dimes = calculate_dimes(cents)
     cents = cents - dimes * 0.10
+    cents = round(cents,2)
+
 
     nickels = calculate_nickels(cents)
     cents = cents - nickels * 0.05
+    cents = round(cents,2)
 
     pennies = calculate_pennies(cents)
     cents = cents - pennies * 0.01
+    cents = round(cents,2)
 
     coins = quarters + dimes + nickels + pennies
 
