@@ -39,6 +39,6 @@ def count_letters(text):
         if let.lower() < 'a':
             puntuation += 1
     lete = length - puntuation
-    return let
+    return lete
 
 main()
