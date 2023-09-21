@@ -10,15 +10,14 @@ def main():
         print("only two command line arguments")
         sys.exit()
 
+    #read data into memory
+    people = []
 
-    #: Read database file into a variable
-        people = []
+    file = open(sys.argv[2], "r")
+    file_reader = csv.DictReader(file)
 
-        file = open(sys.argv[1], "r")
-        file_reader = csv.DictReader(file)
-
-        for row in file_reader:
-            print(row)
+    for row in file_reader:
+        print(row)
 
 
     # TODO: Read DNA sequence file into a variable
