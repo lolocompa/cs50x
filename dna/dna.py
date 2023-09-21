@@ -31,6 +31,8 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
+    AGACT = longest_match(sys.argv[2], "AGACT")
+    print(AGACT)
 
     # TODO: Check database for matching profiles
 
