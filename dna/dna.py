@@ -6,7 +6,7 @@ def main():
 
     # TODO: Check for command-line usage
 
-    if sys.argv == 3:
+    if len(sys.argv) == 3:
         print("only two command line arguments")
         return
 
