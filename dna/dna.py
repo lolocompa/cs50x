@@ -13,7 +13,7 @@ def main():
     #read data into memory
     people = []
 
-    file = open(sys.argv[2], "r")
+    file = open(sys.argv[1], "r")
     file_reader = csv.DictReader(file)
 
     for row in file_reader:
