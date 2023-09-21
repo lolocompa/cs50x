@@ -8,11 +8,18 @@ def main():
 
     if len(sys.argv) != 3:
         print("only two command line arguments")
-        return
+        sys.exit()
 
 
-    # TODO: Read database file into a variable
+    #: Read database file into a variable
+        people = []
+
+        file = open(sys.argv[1], "r")
+        file_reader = csv.DictReader(file)
+
+        for row in file_reader
         
+
 
     # TODO: Read DNA sequence file into a variable
 
