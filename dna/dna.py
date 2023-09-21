@@ -24,9 +24,10 @@ def main():
     dna = []
 
     dna_file = open(sys.argv[2], "r")
-    dna_reader = csv.DictReader(dna_file)
+    dna_reader = dna_file.read()
 
-    for 
+    for char in dna_reader:
+        dna.append(char)
 
 
     # TODO: Find longest match of each STR in DNA sequence
