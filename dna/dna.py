@@ -47,7 +47,7 @@ def main():
 
     for person in people:
         count = 0
-        if AGAT == int(person["AGAT"]):
+        if AGATC == int(person["AGATC"]):
             count +=1
         if TTTTTTCT == int(person["TTTTTTCT"]):
             count += 1
@@ -67,6 +67,10 @@ def main():
         if count == 8:
             name = person["name"]
             print(f"match with {name}")
+            return
+    print("no match")
+    return
+
 
 
 
