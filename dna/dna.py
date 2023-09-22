@@ -46,7 +46,28 @@ def main():
     # TODO: Check database for matching profiles
 
     for person in people:
-        if
+        count = 0
+        if AGAT == int(person["AGAT"]):
+            count +=1
+        if TTTTTTCT == int(person["TTTTTTCT"]):
+            count += 1
+        if AATG == int(person["AATG"]):
+            count += 1
+        if TCTAG == int(person["TCTAG"]):
+            count += 1
+        if GATA == int(person["GATA"]):
+            count += 1
+        if TATC == int(person["TATC"]):
+            count += 1
+        if GAAA == int(person["GAAA"]):
+            count += 1
+        if TCTG == int(person["TCTG"]):
+            count += 1
+
+        if count == 8:
+            name = person["name"]
+            print(f"match with {name}")
+
 
 
 def longest_match(sequence, subsequence):
