@@ -46,7 +46,7 @@ def main():
     # TODO: Check database for matching profiles
 
     for person in people:
-        
+        if
 
 
 def longest_match(sequence, subsequence):
