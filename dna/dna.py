@@ -31,8 +31,8 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    AGACT = longest_match(dna_reader, "AGATC")
-    print(AGACT)
+    AGATC = longest_match(dna_reader, "AGATC")
+
 
     # TODO: Check database for matching profiles
 
