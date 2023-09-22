@@ -46,25 +46,16 @@ def main():
     # TODO: Check database for matching profiles
 
     for person in people:
-        count = 0
-        if AGATC == int(person["AGATC"]):
-            count +=1
-        if TTTTTTCT == int(person["TTTTTTCT"]):
-            count += 1
-        if AATG == int(person["AATG"]):
-            count += 1
-        if TCTAG == int(person["TCTAG"]):
-            count += 1
-        if GATA == int(person["GATA"]):
-            count += 1
-        if TATC == int(person["TATC"]):
-            count += 1
-        if GAAA == int(person["GAAA"]):
-            count += 1
-        if TCTG == int(person["TCTG"]):
-            count += 1
-
-        if count == 8:
+         if (
+        AGATC == int(person["AGATC"])
+        and TTTTTTCT == int(person["TTTTTTCT"])
+        and AATG == int(person["AATG"])
+        and TCTAG == int(person["TCTAG"])
+        and GATA == int(person["GATA"])
+        and TATC == int(person["TATC"])
+        and GAAA == int(person["GAAA"])
+        and TCTG == int(person["TCTG"])
+    ):
             name = person["name"]
             print(f"match with {name}")
             return
