@@ -59,6 +59,8 @@ def main():
             name = person["name"]
             print(f"match with {name}")
             return
+
+    print(int(person["AGATC"]))
     print("no match")
     return
 
