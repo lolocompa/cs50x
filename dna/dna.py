@@ -31,15 +31,23 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
 
+    sequences = []
     element = people[0]
     for e in element:
-        print(e)
+        sequences.append(e)
+    sequences.remove('name')
+
+
+    count = []
+    for sequence in sequences:
+        result = longest_match(dna_reader, sequence)
+        count.append(result)
 
 
 
     # TODO: Check database for matching profiles
 
-
+    
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
