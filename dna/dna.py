@@ -19,7 +19,6 @@ def main():
     for row in file_reader:
         people.append(row)
 
-    print(people)
     # TODO: Read DNA sequence file into a variable
     dna = []
 
@@ -32,14 +31,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
 
-    AGATC = longest_match(dna_reader, "AGATC")
-    TTTTTTCT = longest_match(dna_reader, "TTTTTTCT")
-    AATG = longest_match(dna_reader, "AATG")
-    TCTAG = longest_match(dna_reader, "TCTAG")
-    GATA = longest_match(dna_reader, "GATA")
-    TATC = longest_match(dna_reader, "TATC")
-    GAAA = longest_match(dna_reader, "GAAA")
-    TCTG = longest_match(dna_reader, "TCTG")
+    for element in people:
+        print(element)
 
 
 
