@@ -54,10 +54,11 @@ def main():
             if count[r] == int(person[f"{sequences[r]}"]):
                 check += 1
         if check == length:
-            print(person["name"])
+            name = person["name"]
+            print(f"match with {name}")
             break
 
-
+    print("no match")
 
 
 
