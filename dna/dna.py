@@ -47,8 +47,11 @@ def main():
 
     # TODO: Check database for matching profiles
 
+    length = len(sequences)
     for person in people:
-        print(person[f"{sequences[0]}"])
+        for r in range(length):
+            if 
+
 
 
 
