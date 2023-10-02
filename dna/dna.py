@@ -49,8 +49,11 @@ def main():
 
     length = len(sequences)
     for person in people:
+        check = 0
         for r in range(length):
-            if 
+            if count[r] == int(person[f"{sequences[r]}"]):
+                check += 1
+            print(int(person[f"{sequences[r]}"]))
 
 
 
