@@ -32,31 +32,12 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
 
     for element in people:
-        print(element)
+         for e in element:
+             print(e)
 
 
 
     # TODO: Check database for matching profiles
-
-    for person in people:
-         if (
-        AGATC == int(person["AGATC"])
-        and TTTTTTCT == int(person["TTTTTTCT"])
-        and AATG == int(person["AATG"])
-        and TCTAG == int(person["TCTAG"])
-        and GATA == int(person["GATA"])
-        and TATC == int(person["TATC"])
-        and GAAA == int(person["GAAA"])
-        and TCTG == int(person["TCTG"])
-    ):
-            name = person["name"]
-            print(f"match with {name}")
-            return
-
-    print(int(person["AGATC"]))
-    print("no match")
-    return
-
 
 
 
