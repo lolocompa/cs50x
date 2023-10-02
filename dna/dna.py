@@ -31,9 +31,9 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
 
-    for element in people:
-         for e in element:
-             print(e)
+    element = people[0]
+    for e in element:
+        print(e)
 
 
 
