@@ -56,7 +56,7 @@ def main():
         if check == length:
             name = person["name"]
             print(f"match with {name}")
-            break
+            sys.exit()
 
     print("no match")
 
