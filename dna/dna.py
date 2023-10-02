@@ -54,7 +54,9 @@ def main():
             if count[r] == int(person[f"{sequences[r]}"]):
                 check += 1
         if check == 7:
-            
+            print(person["name"])
+            break
+
 
 
 
