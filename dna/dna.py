@@ -48,7 +48,7 @@ def main():
     # TODO: Check database for matching profiles
 
     for person in people:
-        print(person["name"])
+        print(person[f"{sequences[0]}"])
 
 
 
