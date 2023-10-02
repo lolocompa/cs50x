@@ -55,7 +55,7 @@ def main():
                 check += 1
         if check == length:
             name = person["name"]
-            print(f"match with {name}")
+            print(name)
             sys.exit()
 
     print("no match")
