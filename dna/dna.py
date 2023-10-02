@@ -19,7 +19,7 @@ def main():
     for row in file_reader:
         people.append(row)
 
-
+    print(people)
     # TODO: Read DNA sequence file into a variable
     dna = []
 
