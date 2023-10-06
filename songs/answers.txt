@@ -1,0 +1,7 @@
+to calcultate the avereage energy: SELECT AVG(energy) FROM songs;
+
+to calcultate the avereage valence: SELECT AVG(valence) FROM songs;
+
+to calcultate the avereage danceability: SELECT AVG(danceability) FROM songs;
+
+whith this data i can make the persons audio aura
