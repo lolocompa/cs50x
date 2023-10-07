@@ -1,0 +1,1 @@
+SELECT title FROM movies JOIN stars ON movies.id = stars.movie_id WHERE person_ID = (SELECT id FROM people WHERE name = 'Bradley Cooper') OR person_id = (SELECT id FROM people WHERE name = 'Jennifer Lawrence') GROUP BY title HAVING COUNT(title) > 1;
