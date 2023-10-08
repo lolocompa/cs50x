@@ -35,8 +35,6 @@ SELECT activity,minute,license_plate FROM bakery_security_logs WHERE year = 2021
 --data found:
 --activity | minute | license_plate |
 --+----------+--------+---------------+
---| entrance | 8      | R3G7486       |
---| entrance | 14     | 13FNH73       |
 --| exit     | 16     | 5P2BI95       |
 --| exit     | 18     | 94KL13X       |
 --| exit     | 18     | 6P58WS2       |
@@ -45,4 +43,3 @@ SELECT activity,minute,license_plate FROM bakery_security_logs WHERE year = 2021
 --| exit     | 21     | L93JTIZ       |
 --| exit     | 23     | 322W7JE       |
 --| exit     | 23     | 0NTHK55       |
---| exit     | 35     | 1106N58       |
