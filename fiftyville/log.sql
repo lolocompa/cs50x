@@ -112,3 +112,12 @@ m_location = 'Leggett Street' AND transaction_type = 'withdraw'))
 --| (375) 555-8161 |
 --| (725) 555-3243 |
 
+
+
+
+--found the names of the suspects of accomblice using the phone numbers that i found on the previous step
+
+--|  name  |
+--+--------+
+--| Philip |
+--| Robin  |
