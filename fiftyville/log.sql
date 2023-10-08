@@ -61,3 +61,18 @@ SELECT activity,minute,license_plate FROM bakery_security_logs WHERE year = 2021
 --| Kelsey  |
 --| Bruce   |
 
+
+--next i searched for the accounts number of all the people that withdrawed money from the legget street atm on the day of the theft
+SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street' AND transaction_type = 'withdraw';
+
+--result:
+--| account_number |
+--+----------------+
+--| 28500762       |
+--| 28296815       |
+--| 76054385       |
+--| 49610011       |
+--| 16153065       |
+--| 25506511       |
+--| 81061156       |
+--| 26013199       |
