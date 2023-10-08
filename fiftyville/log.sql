@@ -76,3 +76,22 @@ SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND 
 --| 25506511       |
 --| 81061156       |
 --| 26013199       |
+
+
+
+--found the name of the people related to the account_numbers
+SELECT name FROM people WHERE id IN(SELECT person_id FROM bank_accounts WHERE account_number IN(SELECT account_number FROM atm_transactions WHERE year = 2021 AND month = 7 AND day = 28 AND at
+m_location = 'Leggett Street' AND transaction_type = 'withdraw'))
+
+
+--names:
+--|  name   |
+--+---------+
+--| Kenny   |
+--| Iman    |
+--| Benista |
+--| Taylor  |
+--| Brooke  |
+--| Luca    |
+--| Diana   |
+--| Bruce
