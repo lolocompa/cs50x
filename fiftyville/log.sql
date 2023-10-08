@@ -103,5 +103,6 @@ m_location = 'Leggett Street' AND transaction_type = 'withdraw'))
 --bruce
 
 
---looking at the persons who made phone calls of less than a minute in the day of the theft, i found that only diana and bruce did that
+--looking at the persons who made phone calls of less than a minute in the day of the theft, i found that only diana and bruce did that, also found the people who the called who is the accomplice
  SELECT reciever FROM phone_calls WHERE caller IN (SELECT phone_number FROM people WHERE name = 'Bruce' or name = 'Diana' or name = 'Iman') AND year = 2021 AND month = 7 AND day = 28 AND duration <60
+ 
