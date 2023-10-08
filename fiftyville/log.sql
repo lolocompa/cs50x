@@ -43,3 +43,21 @@ SELECT activity,minute,license_plate FROM bakery_security_logs WHERE year = 2021
 --| exit     | 21     | L93JTIZ       |
 --| exit     | 23     | 322W7JE       |
 --| exit     | 23     | 0NTHK55       |
+
+
+
+
+
+-- i used all the licenses found to look for the names in the peoples table to make a list of suspects
+ SELECT name FROM people WHERE license_plate IN(SELECT license_plate FROM bakery_security_logs WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10 AND minute < 24 AND minute > 15);
+
+ --suspects:
+--| Vanessa |
+--| Barry   |
+--| Iman    |
+--| Sofia   |
+--| Luca    |
+--| Diana   |
+--| Kelsey  |
+--| Bruce   |
+
