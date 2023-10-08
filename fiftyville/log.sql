@@ -98,4 +98,6 @@ m_location = 'Leggett Street' AND transaction_type = 'withdraw'))
 
 
 --updated suspects:
-iman
+--iman
+--diana
+--bruce
