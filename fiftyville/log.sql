@@ -133,4 +133,9 @@ SELECT * FROM flights WHERE origin_airport_id =(SELECT id FROM airports WHERE ci
 
 
 
--- 
+
+-- using the passengers table i looked if either bruce or diana was on that plane, doing that i found that indeed bruce was in that plane and diana wasnt wich means that bruce is the thief
+SELECT seat FROM passengers WHERE passport_number =(SELECT passport_number FROM people WHERE name = 'Bruce') AND flight_id = 36;
+
+
+
