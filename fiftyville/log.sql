@@ -146,3 +146,12 @@ SELECT seat FROM passengers WHERE passport_number =(SELECT passport_number FROM 
 
 --accomplice: robin
 
+
+
+--looking at the plans destination i found wich city the thief was going
+SELECT city FROM airports WHERE id =(SELECT destination_airport_id FROM flights WHERE origin_airport_id =(SELECT id FROM airports WHERE city = 'Fiftyville') AND year = 2021 AND month = 7 AND
+day = 29 ORDER BY hour,minute LIMIT 1);
+
+--|     city      |
+--+---------------+
+--| New York City |
