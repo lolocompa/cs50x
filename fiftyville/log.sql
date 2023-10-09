@@ -131,3 +131,6 @@ SELECT * FROM flights WHERE origin_airport_id =(SELECT id FROM airports WHERE ci
 --+----+-------------------+------------------------+------+-------+-----+------+--------+
 --| 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
 
+
+
+-- 
