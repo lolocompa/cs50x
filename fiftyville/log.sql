@@ -121,3 +121,13 @@ m_location = 'Leggett Street' AND transaction_type = 'withdraw'))
 --+--------+
 --| Philip |
 --| Robin  |
+
+
+-- to find the flight that the thief took i looked for the earliest one the day after the theft
+SELECT * FROM flights WHERE origin_airport_id =(SELECT id FROM airports WHERE city = 'Fiftyville') AND year = 2021 AND month = 7 AND day = 29 ORDER BY hour,minute LIMIT 1;
+
+
+--| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
+--+----+-------------------+------------------------+------+-------+-----+------+--------+
+--| 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+
