@@ -9,29 +9,37 @@
 
             document.addEventListener('DOMContentLoaded', function() {
 
-                let response;
                 let check = document.querySelector('h4');
                 document.querySelector('#1').addEventListener('click', function(event){
-                    response = event.target.id
+                    let response = event.target.id
+                    if (response === '1')
+                    {
+                        check.innerHTML = 'correct';
+                    }
                 });
                 document.querySelector('#2').addEventListener('click', function(event){
-                    response = event.target.id
+                    let response = event.target.id
+                    if (response === '2')
+                    {
+                        check.innerHTML = 'incorrect';
+                    }
                 });
                 document.querySelector('#3').addEventListener('click', function(event){
-                    response = event.target.id
+                    let response = event.target.id
+                    if (response === '3')
+                    {
+                        check.innerHTML = 'incorrect';
+                    }
                 });
                 document.querySelector('#4').addEventListener('click', function(event){
-                    response = event.target.id
+                    let response = event.target.id
+                    if (response === '4')
+                    {
+                        check.innerHTML = 'incorrect';
+                    }
                 });
 
-                if (response == "1")
-                {
-                    check.innerHTML = "correct"
-                }
-                else
-                {
-                    check.innerHTML = "incorrect"
-                }
+
 
             });
 
