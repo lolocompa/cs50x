@@ -9,7 +9,29 @@
 
             document.addEventListener('DOMContentLoaded', function() {
 
-                document.querySelector('#1').addEventListener('clcik', function(event))
+                let response;
+                let check = document.querySelector('h4');
+                document.querySelector('#1').addEventListener('clcik', function(event){
+                    response = event.target.id
+                });
+                document.querySelector('#2').addEventListener('clcik', function(event){
+                    response = event.target.id
+                });
+                document.querySelector('#3').addEventListener('clcik', function(event){
+                    response = event.target.id
+                });
+                document.querySelector('#4').addEventListener('clcik', function(event){
+                    response = event.target.id
+                });
+
+                if (response == "1")
+                {
+                    check.innerHTML = correct
+                }
+                else
+                {
+                    check.innerHTML = incorrect
+                }
 
             });
 
