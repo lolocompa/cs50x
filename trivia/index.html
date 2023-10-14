@@ -18,10 +18,10 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here --> <h3>cual es el mejor club de argentina?</h3>
                 <h4></h4>
-                <button type = "button" id = "1">newells</button>
-                <button type = "button" id = "2">boca</button>
-                <button type = "button" id = "3">central</button>
-                <button type = "button" id = "4">independiente</button>
+                <button type = "button" id = "a">newells</button>
+                <button type = "button" id = "b">boca</button>
+                <button type = "button" id = "c">central</button>
+                <button type = "button" id = "d">independiente</button>
 
             </div>
 
@@ -34,31 +34,31 @@
         <script>
 
                 let check = document.querySelector('h4');
-                document.querySelector('#1').addEventListener('click', function(event){
+                document.querySelector('#a').addEventListener('click', function(event){
                     let response = event.target.id
-                    if (response === '1')
+                    if (response === 'a')
                     {
                         check.innerHTML = 'correct';
                     }
                     alert('hello');
                 });
-                document.querySelector('#2').addEventListener('click', function(event){
+                document.querySelector('#b').addEventListener('click', function(event){
                     let response = event.target.id
-                    if (response === '2')
+                    if (response === 'b')
                     {
                         check.innerHTML = 'incorrect';
                     }
                 });
-                document.querySelector('#3').addEventListener('click', function(event){
+                document.querySelector('#c').addEventListener('click', function(event){
                     let response = event.target.id
-                    if (response === '3')
+                    if (response === 'c')
                     {
                         check.innerHTML = 'incorrect';
                     }
                 });
-                document.querySelector('#4').addEventListener('click', function(event){
+                document.querySelector('#d').addEventListener('click', function(event){
                     let response = event.target.id
-                    if (response === '4')
+                    if (response === 'd')
                     {
                         check.innerHTML = 'incorrect';
                     }
