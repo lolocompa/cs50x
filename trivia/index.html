@@ -28,7 +28,8 @@
             <div class="section">
                 <h2>Part 2: Free Response</h2>
                 <hr>
-                <!-- TODO: Add free response question here -->
+                <!-- TODO: Add free response question here --><h5 class = >cuantos dias tiene una semana?</h5>
+
             </div>
         </div>
         <script>
@@ -39,6 +40,8 @@
                     if (response === 'a')
                     {
                         check.innerHTML = 'correct';
+                        let color = document.querySelector("#a")
+                        color.style.backgroundColor = "green";
                     }
 
                 });
@@ -47,7 +50,8 @@
                     if (response === 'b')
                     {
                         check.innerHTML = 'incorrect';
-                        button.style.backgroundColor = "red";
+                        let color = document.querySelector("#b")
+                        color.style.backgroundColor = "red";
 
                     }
                 });
@@ -56,6 +60,8 @@
                     if (response === 'c')
                     {
                         check.innerHTML = 'incorrect';
+                        let color = document.querySelector("#c")
+                        color.style.backgroundColor = "red";
                     }
                 });
                 document.querySelector('#d').addEventListener('click', function(event){
@@ -63,6 +69,8 @@
                     if (response === 'd')
                     {
                         check.innerHTML = 'incorrect';
+                        let color = document.querySelector("#d")
+                        color.style.backgroundColor = "red";
                     }
                 });
 
