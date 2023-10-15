@@ -84,6 +84,7 @@
                 let answer = document.querySelector('#answer').value
                 document.querySelector('#submit').addEventListener('submit', function(event) {
 
+                    event.preventDefault()
                     if (answer === '7')
                     {
                         check2.innerHTML = 'correct';
