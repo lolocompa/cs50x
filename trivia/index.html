@@ -83,17 +83,23 @@
 
 
                 let check2 = document.querySelector('h5');
-                document.querySelector('#submit').addEventListener('submit', function(event) {
+                document.querySelector('form').addEventListener('submit', function(event) {
 
                     let answer = document.querySelector('#answer').value
                     event.preventDefault()
                     if (answer === '7')
                     {
+                        let x = document.querySelector('#answer')
                         check2.innerHTML = 'correct';
+                        x.style.backgroundColor = 'green';
+
                     }
                     else
                     {
+                        let x = document.querySelector('#answer')
                         check2.innerHTML = 'incorrect';
+                        x.style.backgroundColor = 'red';
+
                     }
                 });
         </script>
