@@ -29,7 +29,7 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here --><h3>cuantos dias tiene una semana?</h3>
-                <h4></h4>
+                <h5></h5>
                 <input autocomplet="off" autofocus type="text" id="answer"></input>
                 <button type = "submit" id="submit">check answer</button>
             </div>
@@ -80,13 +80,17 @@
 
 
 
-
+                let check2 = document.querySelector('h5');
                 let answer = document.querySelector('#answer').value
                 document.querySelector('#submit').addEventListener('submit' function(event) {
 
                     if (answer === '7')
                     {
-                        
+                        check2.innerHTML = 'correct';
+                    }
+                    else
+                    {
+                        check2.innerHTML = 'incorrect';
                     }
                 });
         </script>
