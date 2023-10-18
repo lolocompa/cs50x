@@ -17,3 +17,7 @@
 .img_container {
     display: flex
 }
+
+.about-me-title {
+    font-size: 30px
+}
