@@ -1,3 +1,8 @@
 .centered {
     text-align:center;
 }
+
+.pic_size {
+    width: 100px;
+    height: 100px;
+}
