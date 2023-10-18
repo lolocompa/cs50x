@@ -13,3 +13,7 @@
 .button_size {
     padding: 25px 70px
 }
+
+.img_container {
+    display: flex
+}
