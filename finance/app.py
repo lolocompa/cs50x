@@ -108,14 +108,23 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    username = request.form.get("username")
-    password = request.form.get("password")
-    confirmation = request.form.get("confirmation")
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        username = request.form.get("username")
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
 
-    if not username or not password or not confirmation:
-        return apology("error")
+        check_name = db.execute("SELECT username FROM users WHERE username = ?", username)
 
-    return render_template("register.html")
+        if not username or not password or not confirmation:
+            return apology("error")
+        elif password != confirmation:
+            return apology("error")
+        elif check_name:
+            return apology("error")
+
+
 
 
 @app.route("/sell", methods=["GET", "POST"])
