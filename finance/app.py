@@ -119,11 +119,11 @@ def register():
         check_name = db.execute("SELECT username FROM users WHERE username = ?", username)
 
         if not username or not password or not confirmation:
-            return apology("error")
+            return apology("dont leave a blank space")
         elif password != confirmation:
-            return apology("error")
+            return apology("password soesnt match confirmation")
         elif check_name:
-            return apology("error")
+            return apology("username already exists")
 
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
 
