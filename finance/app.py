@@ -114,6 +114,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
+        hashed_password = generate_password_hash(password)
 
         check_name = db.execute("SELECT username FROM users WHERE username = ?", username)
 
@@ -123,6 +124,8 @@ def register():
             return apology("error")
         elif check_name:
             return apology("error")
+
+        db.execute("INSERT INTO users (username)")
 
 
 
