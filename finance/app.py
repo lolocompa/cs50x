@@ -125,7 +125,7 @@ def register():
         elif check_name:
             return apology("error")
 
-        db.execute("INSERT INTO users (username)")
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
 
 
 
