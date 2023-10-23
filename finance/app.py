@@ -127,6 +127,8 @@ def register():
 
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
 
+        return redirect("/login")
+
 
 
 
