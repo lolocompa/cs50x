@@ -110,7 +110,10 @@ def quote():
 def register():
     username = request.form.get("username")
     password = request.form.get("password")
-    username = request.form.get("username")
+    confirmation = request.form.get("confirmation")
+
+    if not username or password or confirmation:
+        return apology("error")
 
     return render_template("register.html")
 
