@@ -21,3 +21,10 @@ nav .navbar-brand .green
 {
     color: #2e944b;
 }
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
