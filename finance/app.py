@@ -60,7 +60,7 @@ def buy():
 
         price = bought["price"] * shares
 
-        current_cash = db.execute("SELECT cash FROM users")
+        current_cash = db.execute("SELECT cash FROM users WHERE id =")
 
 
 
