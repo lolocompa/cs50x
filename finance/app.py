@@ -53,6 +53,8 @@ def buy():
     else:
         sym = request.form.get("symbol")
         shares = request.form.get("shares")
+        user_id = session["id"]
+
         bought = lookup(sym)
 
         if not bought:
