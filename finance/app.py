@@ -69,6 +69,10 @@ def buy():
 
         db.execute("INSERT INTO purchase (symbol, shares, price, user_id) VALUES (?, ?, ?, ?)", sym, shares, price, user_id)
 
+        new_cash = current_cash - price
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
+
 
 
 
