@@ -57,7 +57,7 @@ def buy():
         if not bought:
             return apology("bought wasnt succesfull")
 
-        price = bought.price
+        price = bought["price"]
         return apology(price)
 
 
