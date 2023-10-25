@@ -53,7 +53,7 @@ def buy():
     else:
         sym = request.form.get("symbol")
         shares = request.form.get("shares")
-        user_id = session["id"]
+        user_id = session["user_id"]
 
         bought = lookup(sym)
 
@@ -62,7 +62,12 @@ def buy():
 
         price = bought["price"] * shares
 
-        current_cash = db.execute("SELECT cash FROM users WHERE id =")
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+
+        if current_cash < price:
+            return apology("not enough cash")
+
+        db.execute("INSERT INTO purchase (symbol, shares, price, user_id) VALUES (?, ?, ?, ?)", sym, shares, price, user_id)
 
 
 
