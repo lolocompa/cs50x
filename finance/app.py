@@ -58,6 +58,7 @@ def buy():
             return apology("bought wasnt succesfull")
 
         price = bought.price
+        return apology(price)
 
 
 
