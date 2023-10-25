@@ -52,13 +52,14 @@ def buy():
         return render_template("buy.html")
     else:
         sym = request.form.get("symbol")
+        shares = request.form.get("shares")
         bought = lookup(sym)
 
         if not bought:
             return apology("bought wasnt succesfull")
 
-        price = bought["price"]
-        return apology(price)
+        price = bought["price"] * shares
+
 
 
 
