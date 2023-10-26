@@ -45,7 +45,9 @@ def index():
         name = look["name"]
         market_price = look["price"]
         sym = look["symbol"]
-        shares = db.execute("SELECT shares FROM purchases WHERE symbol = ?", sym)
+        shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ?", sym)
+        user_total = db.execute("SELECT cash FROM users WHERE id = ?", user__id)
+        price_total = market_price * shares
 
 
 
