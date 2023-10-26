@@ -38,9 +38,8 @@ def index():
 
     user__id = session["user_id"]
     display = db.execute("SELECT symbol FROM purchases WHERE user_id = ?", user__id)
-    symbols = display["symbol"]
 
-    for symbol in symbols:
+    for record in display:
         look = lookup(symbol)
         name = look["name"]
         market_price = look["price"]
@@ -49,7 +48,6 @@ def index():
         user_total = db.execute("SELECT cash FROM users WHERE id = ?", user__id)
         price_total = market_price * shares
 
-        return render_template("index.html", name, market_price, sym, shares, user_total, price_total)
 
 
 
