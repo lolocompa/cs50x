@@ -49,9 +49,12 @@ def index():
         user_total = db.execute("SELECT cash FROM users WHERE id = ?", user__id)
         price_total = market_price * shares
 
+        return render_template("index.html", name, market_price, sym, shares, user_total, price_total)
 
 
-    return render_template("index.html")
+
+
+
 
 
 
