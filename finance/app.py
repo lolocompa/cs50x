@@ -62,13 +62,13 @@ def index():
         sym.append(sym)
 
         shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
-        shares
+        shares.append(shares)
 
         price_total = market_price * shares
-        portfolio["price_total"] = price_total
+        price_total.append(price_total)
 
 
-    return render_template("index.html", portfolio)
+    return render_template("index.html", )
 
 
 
