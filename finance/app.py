@@ -38,7 +38,11 @@ def index():
 
     user__id = session["user_id"]
     display = db.execute("SELECT symbol, shares, price FROM purchases WHERE user_id = ?", user__id)
-    symbol = display["symbol"]
+    symbols = display["symbol"]
+
+    for symbol in symbols:
+        look = lookup(symbol)
+        
 
 
     return render_template("index.html")
