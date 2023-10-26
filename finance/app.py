@@ -42,6 +42,10 @@ def index():
 
     for symbol in symbols:
         look = lookup(symbol)
+        name = look["name"]
+        market_price = look["price"]
+        sym = look["symbol"]
+
         
 
 
