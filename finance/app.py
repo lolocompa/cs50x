@@ -36,7 +36,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    
+    user__id = session["user_id"]
+    display = db.execute("SELECT symbol, shares,")
+
     return render_template("index.html")
 
 
