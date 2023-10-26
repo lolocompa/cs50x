@@ -36,18 +36,25 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    user__id = session["user_id"]
-    display = db.execute("SELECT symbol FROM purchases WHERE user_id = ?", user__id)
+    user_id = session["user_id"]
+    display = db.execute("SELECT symbol FROM purchases WHERE user_id = ?", user_id)
 
     portfolio = {}
 
     for record in display:
         look = lookup(symbol)
+
         name = look["name"]
+        portfolio["name"] = name
+
         market_price = look["price"]
+        portfolio["market_price"] = market_price
+
         sym = look["symbol"]
+        portfolio[symbol]
+
         shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ?", sym)
-        user_total = db.execute("SELECT cash FROM users WHERE id = ?", user__id)
+        user_total = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         price_total = market_price * shares
 
 
