@@ -39,6 +39,8 @@ def index():
     user__id = session["user_id"]
     display = db.execute("SELECT symbol FROM purchases WHERE user_id = ?", user__id)
 
+    portfolio = {}
+
     for record in display:
         look = lookup(symbol)
         name = look["name"]
