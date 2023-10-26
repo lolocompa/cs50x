@@ -39,7 +39,11 @@ def index():
     user_id = session["user_id"]
     display = db.execute("SELECT symbol FROM purchases WHERE user_id = ?", user_id)
 
-    portfolio = {}
+    name = []
+    market_price = []
+    
+    user_total = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+
 
     for record in display:
         look = lookup(symbol)
