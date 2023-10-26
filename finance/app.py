@@ -53,19 +53,16 @@ def index():
         look = lookup(symbol)
 
         name = look["name"]
-        portfolio["name"] = name
+        name.append(name)
 
         market_price = look["price"]
-        portfolio["market_price"] = market_price
+        market_price.append(market_price)
 
         sym = record["symbol"]
-        portfolio["symbol"] = sym
+        sym.append(sym)
 
         shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
-        portfolio["shares"] = shares[0]
-
-        user_total = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        portfolio["user_total"] = user_total[0]
+        shares
 
         price_total = market_price * shares
         portfolio["price_total"] = price_total
