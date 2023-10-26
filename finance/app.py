@@ -41,6 +41,8 @@ def index():
 
     name = []
     market_price = []
+    sym = []
+    shares = []
     
     user_total = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
 
