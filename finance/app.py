@@ -50,12 +50,20 @@ def index():
         market_price = look["price"]
         portfolio["market_price"] = market_price
 
-        sym = look["symbol"]
-        portfolio[symbol]
+        sym = record["symbol"]
+        portfolio["symbol"] = sym
 
-        shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ?", sym)
+        shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
+        portfolio["shares"] = shares[0]
+
         user_total = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        portfolio["user_total"] = user_total[0]
+
         price_total = market_price * shares
+        portfolio["price_total"] = price_total
+
+
+    return render_template("index.html", portfolio)
 
 
 
