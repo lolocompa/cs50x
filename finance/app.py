@@ -45,8 +45,8 @@ def index():
         name = look["name"]
         market_price = look["price"]
         sym = look["symbol"]
+        shares = db.execute("SELECT shares FROM purchases WHERE symbol = ?", sym)
 
-        
 
 
     return render_template("index.html")
