@@ -241,8 +241,18 @@ def register():
 
 
 
+
+
+
+
+
+
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+
+    user_id = session["user_id"]
+
+    user_sym = db.execute("SELECT symbol FROM purchases WHERE id = ? GRUOP BY symbol", user_id)
+    return render_template("sell.html", user_sym=user_sym)
