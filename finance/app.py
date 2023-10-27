@@ -260,3 +260,5 @@ def sell():
     else:
         symbol = request.form.get("symbol")
         shares = request.form.shares("shares")
+
+        total_shares = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
