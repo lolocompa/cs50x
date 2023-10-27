@@ -49,7 +49,11 @@ def index():
 
 
     for record in display:
-        look = lookup(symbol)
+
+        sym = record["symbol"]
+        sym_l.append(sym)
+
+        look = lookup(sym)
 
         name = look["name"]
         name_l.append(name)
@@ -57,8 +61,6 @@ def index():
         market_price = look["price"]
         market_price_l.append(market_price)
 
-        sym = record["symbol"]
-        sym_l.append(sym)
 
         shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
         shares_l.append(shares)
@@ -67,7 +69,7 @@ def index():
         price_total_l.append(price_total)
 
 
-    return render_template("index.html", name=name_l, market_price=market_price_l, sym=sym_l, shares=shares_l, user_total=user_total[0]["cash"], price_total=price_total_l)
+    return render_template("index.html", name_l=name_l, market_price_l=market_price_l, sym_l=sym_l, shares_l=shares_l, user_total=user_total[0]["cash"], price_total_l=price_total_l)
 
 
 
