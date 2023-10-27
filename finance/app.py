@@ -70,7 +70,7 @@ def index():
         price_total_l.append(price_total)
 
 
-    return render_template("index.html", name_l=name_l, market_price_l=market_price_l, sym_l=sym_l, shares_l=shares_l, user_total=user_total[0]["cash"], price_total_l=price_total_l,)
+    return render_template("index.html", name_l=name_l, market_price_l=market_price_l, sym_l=sym_l, shares_l=shares_l, user_total=user_total[0]["cash"], price_total_l=price_total_l,sq)
 
 
 
