@@ -37,7 +37,7 @@ def index():
     """Show portfolio of stocks"""
 
     user_id = session["user_id"]
-    display = db.execute("SELECT symbol FROM purchases WHERE user_id = ?", user_id)
+    display = db.execute("SELECT symbol FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
 
     name_l = []
     market_price_l = []
