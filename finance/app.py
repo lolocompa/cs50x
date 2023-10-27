@@ -255,7 +255,7 @@ def sell():
     user_id = session["user_id"]
     user_sym = db.execute("SELECT symbol FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
 
-    if request.method = "GET":
+    if request.method == "GET":
         return render_template("sell.html", user_sym=user_sym)
     else:
         symbol = request.form.get("symbol")
@@ -263,4 +263,5 @@ def sell():
 
         total_shares = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
 
-        if total_shares
+        if total_shares[0]["totla_shares"] < shares:
+            return apology("too much shares")
