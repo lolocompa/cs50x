@@ -18,31 +18,21 @@
             </thead>
             <tbody>
                 <tr>
-                    {% for symbol in sym_l %}
                     <td class="text-start">
                             {{ symbol }}
                     </td>
-                    {% endfor %}
-                    {% for name in name_l %}
                     <td class="text-start">
                          {{ name }}
                     </td>
-                    {% endfor %}
-                    {% for shares in shares_l %}
                     <td class="text-end">
                             {{ shares }}
                     </td>
-                    {% endfor %}
-                    {% for price in price_l %}
                     <td class="text-end">
                             {{ price }}
                     </td>
-                    {% endfor %}
-                    {% for total in total_l %}
                     <td class="text-end">
                             {{ total }}
                     </td>
-                    {% endfor %}
                 </tr>
                 <tfoot>
                     <tr>
