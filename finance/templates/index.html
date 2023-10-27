@@ -18,30 +18,32 @@
             </thead>
             <tbody>
                 <tr>
+                    {% for i in range(times) %}
                     <td class="text-start">
-                            {{ symbol }}
+                            {{ sym_l[i] }}
                     </td>
                     <td class="text-start">
-                         {{ name }}
+                         {{ name_l[i] }}
                     </td>
                     <td class="text-end">
-                            {{ shares }}
+                            {{ shares_l[i] }}
                     </td>
                     <td class="text-end">
-                            {{ price }}
+                            {{ market_price_l[i] }}
                     </td>
                     <td class="text-end">
-                            {{ total }}
+                            {{ price_total_l[i] }}
                     </td>
+                    {% endfor %}
                 </tr>
                 <tfoot>
                     <tr>
                         <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-                        <td class="border-0 text-end"></td>
+                        <td class="border-0 text-end">{{ user_total }}</td>
                     </tr>
                     <tr>
                         <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
-                        <td class="border-0 w-bold text-end"></td>
+                        <td class="border-0 w-bold text-end">10000 usd</td>
                     </tr>
                 </tfoot>
             </tbody>
