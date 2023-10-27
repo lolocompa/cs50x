@@ -262,6 +262,8 @@ def sell():
         shares = request.form.get("shares")
 
         total_shares = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
+                shares_list = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
+        shares = shares_list[0]["total_shares"]
 
         if total_shares[0]["total_shares"] < shares:
             return apology("too much shares")
