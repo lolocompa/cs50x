@@ -8,9 +8,10 @@
     <form action="/sell" method="post">
         <select name="symbol">
             {% for symbol in user_sym %}
-            <option value=symbol >{{ symbol }}</option>
+            <option value=symbol >{{ symbol.symbol }}</option>
             {% endfor %}
         </select>
+        <br>
         <br>
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" min="1" name="shares" placeholder="shares" type="number">
         <br>
