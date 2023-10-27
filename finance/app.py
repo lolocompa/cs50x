@@ -62,10 +62,11 @@ def index():
         market_price_l.append(market_price)
 
 
-        shares = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
+        shares_list = db.execute("SELECT SUM(shares) FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
+        shares = shares_list[0]["shares"]
         shares_l.append(shares)
 
-        price_total = market_price * shares
+        price_total = market_price * float(shares)
         price_total_l.append(price_total)
 
 
