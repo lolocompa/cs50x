@@ -254,5 +254,5 @@ def sell():
 
     user_id = session["user_id"]
 
-    user_sym = db.execute("SELECT symbol FROM purchases WHERE id = ? GRUOP BY symbol", user_id)
+    user_sym = db.execute("SELECT symbol FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
     return render_template("sell.html", user_sym=user_sym)
