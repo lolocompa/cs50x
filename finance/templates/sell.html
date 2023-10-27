@@ -7,6 +7,7 @@
 {% block main %}
     <form action="/sell" method="post">
         <select name="symbol">
+            <option disabled>symbol</option>
             {% for symbol in user_sym %}
             <option value=symbol >{{ symbol.symbol }}</option>
             {% endfor %}
