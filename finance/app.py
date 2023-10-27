@@ -259,9 +259,9 @@ def sell():
         return render_template("sell.html", user_sym=user_sym)
     else:
         symbol = request.form.get("symbol")
-        shares = request.form.shares("shares")
+        shares = request.form.get("shares")
 
         total_shares = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
 
-        if total_shares[0]["totla_shares"] < shares:
+        if total_shares[0]["total_shares"] < shares:
             return apology("too much shares")
