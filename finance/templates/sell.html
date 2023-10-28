@@ -6,7 +6,7 @@
 
 {% block main %}
     <form action="/sell" method="post">
-        <select name="symbol">
+        <select name="symbol" required>
             <option disabled selected>symbol</option>
             {% for symbo in user_sym %}
             <option value="{{ symbo.symbol }}" >{{ symbo.symbol }}</option>
@@ -14,7 +14,7 @@
         </select>
         <br>
         <br>
-        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="sha" min="1" name="shares" placeholder="shares" type="number">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="sha" min="1" name="shares" placeholder="shares" type="number" required>
         <br>
         <button class="btn btn-primary" type="submit">submit</button>
     </form>
