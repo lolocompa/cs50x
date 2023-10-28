@@ -141,7 +141,7 @@ def history():
 
     user_id = session["user_id"]
 
-    data = db.execute("SELECT symbol, shares, market_price, timestamp FROM purchases WHERE user_id = ? ", user_id)
+    data = db.execute("SELECT symbol, shares, market_price, timestamp FROM purchases WHERE user_id = ? GROUP BY symbol ORDER BY timestamp", user_id)
 
     return render_template("history.html", data=data)
 
