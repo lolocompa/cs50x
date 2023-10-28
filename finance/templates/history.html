@@ -20,7 +20,7 @@
                 <tr>
                     <td class="text-start">{{ dict.symbol }}</td>
                     <td class="text-start">{{ dict.shares }}</td>
-                    <td class="text-end">{{ dict.market_price }}</td>
+                    <td class="text-end">{{ dict.market_price | usd }}</td>
                     <td class="text-end">{{ dict.timestamp }}</td>
                 </tr>
                 {% endfor %}
