@@ -271,6 +271,8 @@ def sell():
 
         data = lookup(symbol)
         market_price = data["price"]
+        shares_sold = -1 * shares
 
+        db.execute("INSERT INTO purchases (symbol, shares, )")
 
         return redirect("/")
