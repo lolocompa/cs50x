@@ -108,7 +108,9 @@ def buy():
         if current_cash[0]["cash"] < price:
             return apology("not enough cash")
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, user_id) VALUES (?, ?, ?, ?)", sym, shares, price, user_id)
+        market_price = bought["price"]
+
+        db.execute("INSERT INTO purchases (symbol, shares, price, user_id, market_price) VALUES (?, ?, ?, ?, ?)", sym, shares, price, user_id, market_price)
 
         new_cash = current_cash[0]["cash"] - price
 
