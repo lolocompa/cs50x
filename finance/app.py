@@ -263,7 +263,7 @@ def sell():
         shares = int(shares)
 
         shares_list = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
-        shares_total = shares_list[0]["total_shares"] or 0
+        shares_total = shares_list[0]["total_shares"]
 
         if shares_total < shares:
             return apology("too much shares")
