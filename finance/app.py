@@ -260,10 +260,10 @@ def sell():
     else:
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
+        shares = int(shares)
 
-        total_shares = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
-                shares_list = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", sym, user_id)
-        shares = shares_list[0]["total_shares"]
+        shares_list = db.execute("SELECT SUM(shares) AS total_shares FROM purchases WHERE symbol = ? AND user_id = ?", symbol, user_id)
+        shares_total = shares_list[0]["total_shares"]
 
-        if total_shares[0]["total_shares"] < shares:
+        if shares_total < shares:
             return apology("too much shares")
