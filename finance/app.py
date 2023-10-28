@@ -276,6 +276,8 @@ def sell():
         market_price = data["price"]
         shares_sold = -1 * shares
 
-        db.execute("INSERT INTO purchases (symbol, shares, market_price, user_id) VALUES (?, ?, ?, ?)", symbol, shares_sold, market_price, user_id)
+        total_price = market_price * shares_sold
+
+        db.execute("INSERT INTO purchases (symbol, shares, market_price, user_id, price) VALUES (?, ?, ?, ?, ?)", symbol, shares_sold, market_price, user_id, total_price)
 
         return redirect("/")
