@@ -269,5 +269,8 @@ def sell():
             return apology("too much shares")
 
 
-        
+        data = lookup(symbol)
+        market_price = data["price"]
+
+
         return redirect("/")
