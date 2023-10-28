@@ -93,6 +93,7 @@ def buy():
         return render_template("buy.html")
     else:
         sym = request.form.get("symbol")
+        sym = sym.upper()
         shares = int(request.form.get("shares"))
         user_id = session["user_id"]
 
