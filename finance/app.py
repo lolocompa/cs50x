@@ -267,4 +267,4 @@ def sell():
 
         if shares_total < shares:
             return apology("too much shares")
-        redirect("index.html")
+        return redirect(")
