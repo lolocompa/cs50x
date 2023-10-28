@@ -278,7 +278,7 @@ def sell():
 
         total_price = market_price * shares
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        n
+        new_cash =current_cash[0]["cash"] + total_price
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
