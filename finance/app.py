@@ -276,7 +276,11 @@ def sell():
         market_price = data["price"]
         shares_sold = -1 * shares
 
-        total_price = market_price * shares_sold
+        total_price = market_price * shares
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        n
+
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute("INSERT INTO purchases (symbol, shares, market_price, user_id, price) VALUES (?, ?, ?, ?, ?)", symbol, shares_sold, market_price, user_id, total_price)
 
