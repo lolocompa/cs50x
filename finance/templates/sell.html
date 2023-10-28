@@ -8,8 +8,8 @@
     <form action="/sell" method="post">
         <select name="symbol">
             <option disabled selected>symbol</option>
-            {% for symbol in user_sym %}
-            <option value=symbol >{{ symbol.symbol }}</option>
+            {% for symbo in user_sym %}
+            <option value=symbo >{{ symbo.symbol }}</option>
             {% endfor %}
         </select>
         <br>
