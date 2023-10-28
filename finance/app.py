@@ -96,8 +96,12 @@ def buy():
         sym = request.form.get("symbol")
         sym = sym.upper()
         shares = request.form.get("shares")
-        if not isinstance(shares, int):
-            return apology("invalid")
+
+        try:
+            shares = int(shares)
+        except ValueError:
+            return apology("Invalid number of shares")
+
         shares = int(shares)
         user_id = session["user_id"]
 
