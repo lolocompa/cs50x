@@ -85,4 +85,4 @@ def logout():
 @app.route("/")
 @login_required
 def index():
-    return render_template("layout.html")
+    return apology
