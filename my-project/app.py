@@ -117,15 +117,7 @@ def register():
 
 
 
-
-
-
-
-
-
-
-
 @app.route("/")
 @login_required
 def index():
-    return apology()
+    return apology("sus")
