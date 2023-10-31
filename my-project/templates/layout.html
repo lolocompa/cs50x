@@ -54,6 +54,7 @@
             <div class="alert alert-primary mb-0 text-center" role="alert">
                 {{ get_flashed_messages() | join(" ") }}
             </div>
+        {% endif %}
         </header>
         <main class="container-fluid py-5 text-center">
             {% block main %}{% endblock %}
