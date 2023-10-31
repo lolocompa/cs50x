@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Movie Recommendation</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-form">
+            <h2>Find Your Movie</h2>
+            <form>
+                <input type="text" placeholder="Search by title, genre, or actor">
+                <select>
+                    <option value="">Select Genre</option>
+                    <!-- Add genre options here -->
+                </select>
+                <input type="number" placeholder="Minimum Rating">
+                <input type="number" placeholder="Release Year">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="movie-list">
+            <!-- Movie cards will be displayed here -->
+            <!-- You can generate these dynamically using JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Movie Recommendation</p>
+    </footer>
+</body>
+</html>
