@@ -67,7 +67,7 @@ def login():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return apology("error fdsasf", 543)
+        return apology("error fdsasf")
 
 
 @app.route("/logout")
