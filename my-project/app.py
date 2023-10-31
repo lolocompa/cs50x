@@ -9,4 +9,4 @@ from helpers import apology, login_required
 
 
 
-
+app = Flask(__name__)
