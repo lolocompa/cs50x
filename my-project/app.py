@@ -129,4 +129,7 @@ def index():
         actor2 = request.form.get("actor2")
         director = request.form.get("director")
 
-        
+        if year:
+            filt_year = db.execute("SELECT id FROM movies WHERE year >= ?", year)
+        if rating:
+            
