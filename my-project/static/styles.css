@@ -9,9 +9,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     border: 1px solid black;
-    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20191113/pngtree-blue-film-technology-film-background-image_322042.jpg");
-    background-size: cover; /* Adjust to your preference */
-    background-repeat: no-repeat;
 }
 
 header {
