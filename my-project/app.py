@@ -123,4 +123,10 @@ def index():
     if request.method == "GET":
         return render_template("index.html")
     else:
-         return render_template("index.html")
+        year = request.form.get("year")
+        rating = request.form.get("rating")
+        actor1 = request.form.get("actor1")
+        actor2 = request.form.get("actor2")
+        director = request.form.get("director")
+
+        
