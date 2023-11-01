@@ -117,7 +117,10 @@ def register():
 
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
-    return apology("sus")
+    if request.method == "GET":
+        return render_template("index.html")
+    else:
+         return render_template("index.html")

@@ -5,5 +5,13 @@
 {% endblock %}
 
 {% block main %}
-    
+    <h1>filter movies by your preference</h1>
+    <br>
+    <form action="/" method="post">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="year" max="2023" name="year" placeholder="minimun year" type="number">
+        <br>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="rating" step="0.1" min="1" max="10"  name="rating" placeholder="minimun rating" type="number">
+        <br>
+        <button class="btn btn-primary" type="submit">see results</button>
+    </Form>
 {% endblock %}
