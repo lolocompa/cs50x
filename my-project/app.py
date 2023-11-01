@@ -134,4 +134,4 @@ def index():
         if rating:
             filt_rating = db.execute("SELECT movie_id FROM ratings WHERE rating = ?", rating)
         if actor1:
-            filt_actor1 = db.execute("SELECT id FROM movies JOIN stars ON movies.id = stars.movie_id WHERE person_ID = (SELECT id FROM people WHERE name LIKE = 'Bradley Cooper')")
+            filt_actor1 = db.execute("SELECT id FROM movies JOIN stars ON movies.id = stars.movie_id WHERE person_ID = (SELECT id FROM people WHERE name LIKE 'bradley cooper%'")
