@@ -132,4 +132,6 @@ def index():
         if year:
             filt_year = db.execute("SELECT id FROM movies WHERE year >= ?", year)
         if rating:
-            
+            filt_rating = db.execute("SELECT movie_id FROM ratings WHERE rating = ?", rating)
+        if actor1:
+            filt_actor1 = db.execute("")
