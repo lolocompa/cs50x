@@ -7,13 +7,13 @@
 {% block main %}
     <ul>
         {% for title in movie_titles %}
-        <div style="display: flex">
+        <div>
             <li>
                 <a href="https://www.google.com/search?q={{ title }}">{{ title }}</a>
-                <form>
-                    <button class="btn btn-primary" type="submit">add to list</button>
-                </form>
             </li>
+            <form>
+                <button class="btn btn-primary" type="submit">add to list</button>
+            </form>
         </div>
         {% endfor %}
     </ul>
