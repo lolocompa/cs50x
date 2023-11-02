@@ -129,13 +129,29 @@ def index():
         actor2 = request.form.get("actor2")
         director = request.form.get("director")
 
+
+        query = "SELECT DISTINCT movies.id, movies.title FROM movies"
+
         if year:
-            filt_year = db.execute("SELECT id FROM movies WHERE year >= ?", year)
+            query += " JOIN ratings ON movies.id = ratings.movie_id WHERE movies.year >= ?"
         if rating:
-            filt_rating = db.execute("SELECT movie_id FROM ratings WHERE rating = ?", rating)
+            query += " JOIN ratings AS r ON movies.id = r.movie_id WHERE r.rating = ?"
         if actor1:
-            filt_actor1 = db.execute("SELECT id FROM movies JOIN stars ON movies.id = stars.movie_id WHERE person_ID = (SELECT id FROM people WHERE name LIKE '?%')", actor1)
+            query += " JOIN stars AS s1 ON movies.id = s1.movie_id"
+            query += " JOIN people AS p1 ON s1.person_id = p1.id WHERE p1.name LIKE ?"
         if actor2:
-            filt_actor2 = db.execute("SELECT id FROM movies JOIN stars ON movies.id = stars.movie_id WHERE person_ID = (SELECT id FROM people WHERE name LIKE '?%')", actor2)
+            query += " JOIN stars AS s2 ON movies.id = s2.movie_id"
+            query += " JOIN people AS p2 ON s2.person_id = p2.id WHERE p2.name LIKE ?"
         if director:
-            filt_director = db.execute("SELECT id FROM movies JOIN directors ON movies.id = directors.movie_id WHERE person_id IN(SELECT id FROM people WHERE name LIKE '?%')", director)
+            query += " JOIN directors AS d ON movies.id = d.movie_id"
+            query += " JOIN people AS pd ON d.person_id = pd.id WHERE pd.name LIKE ?"
+
+        # Execute the SQL query using your database connection
+        results = db.execute(query, year, rating, f'%{actor1}%', f'%{actor2}%', f'%{director}%')
+
+        # Process and return the results as needed
+        # You may want to render a template with the results or return JSON, for example
+
+        # Example: return a list of movie titles
+        movie_titles = [result['title'] for result in results]
+        return render_template("result.html", movie_titles=movie_titles)
