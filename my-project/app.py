@@ -181,4 +181,5 @@ def index():
 
 @app.route("/list", methods=["GET", "POST"])
 @login_required
-def index():
+def list():
+    
