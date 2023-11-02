@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    result
+{% endblock %}
+
+{% block main %}
+    <ul>
+        {% for title in movie_titles %}
+            <li>{{ title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
