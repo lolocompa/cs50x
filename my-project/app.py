@@ -137,7 +137,7 @@ def index():
             query += " JOIN ratings ON movies.id = ratings.movie_id WHERE movies.year >= ?"
             params.append(year)
         if rating:
-            query += " JOIN ratings AS r ON movies.id = r.movie_id WHERE r.rating = ?"
+            query += " JOIN ratings AS r ON movies.id = r.movie_id WHERE r.rating >= ?"
             params.append(rating)
         if actor1:
             query += " JOIN stars AS s1 ON movies.id = s1.movie_id"
