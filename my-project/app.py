@@ -129,25 +129,40 @@ def index():
         actor2 = request.form.get("actor2")
         director = request.form.get("director")
 
+        count = 0
 
         query = "SELECT DISTINCT movies.id, movies.title FROM movies"
 
         if year:
             query += " JOIN ratings ON movies.id = ratings.movie_id WHERE movies.year >= ?"
+            count += 1
         if rating:
             query += " JOIN ratings AS r ON movies.id = r.movie_id WHERE r.rating = ?"
+            count += 1
         if actor1:
             query += " JOIN stars AS s1 ON movies.id = s1.movie_id"
             query += " JOIN people AS p1 ON s1.person_id = p1.id WHERE p1.name LIKE ?"
+            count += 1
         if actor2:
             query += " JOIN stars AS s2 ON movies.id = s2.movie_id"
             query += " JOIN people AS p2 ON s2.person_id = p2.id WHERE p2.name LIKE ?"
+            count += 1
         if director:
             query += " JOIN directors AS d ON movies.id = d.movie_id"
             query += " JOIN people AS pd ON d.person_id = pd.id WHERE pd.name LIKE ?"
+            count += 1
 
         # Execute the SQL query using your database connection
-        results = db.execute(query, year, rating, f'%{actor1}%', f'%{actor2}%', f'%{director}%')
+        if count == 1:
+            results = db.execute(query, year)
+        elif count == 2:
+            results = db.execute(query, year, rating)
+        elif count == 3:
+            results = db.execute(query, year, rating, f'%{actor1}%')
+        elif count == 4:
+            results = db.execute(query, year, rating, f'%{actor1}%', f'%{actor2}%')
+        elif count == 5:
+            results = db.execute(query, year, rating, f'%{actor1}%', f'%{actor2}%', f'%{director}%')
 
         # Process and return the results as needed
         # You may want to render a template with the results or return JSON, for example
