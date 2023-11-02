@@ -185,7 +185,8 @@ def list():
     if request.method == "GET":
         return render_template("list.html")
     else:
+        user_id = session["user_id"]
         title = request.form.get("title")
         released = db.execute("SELECT year FROM movies WHERE title = ?", title)
         rating = db.execute("SELECT rating FROM rating WHERE movie_id = (SELECT id FROM movies WHERE title = ?)", title)
-        db.execute("INSERT INTO list (title, year, rating) VALUES")
+        db.execute("INSERT INTO list (title, year, rating, user_id) VALUES (?, ?, ?, ?)", title, released, rating, user_id)
