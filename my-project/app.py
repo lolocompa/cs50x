@@ -174,3 +174,11 @@ def index():
         # Example: return a list of movie titles
         movie_titles = [result['title'] for result in results]
         return render_template("result.html", movie_titles=movie_titles)
+
+
+
+
+
+@app.route("/list", methods=["GET", "POST"])
+@login_required
+def index():

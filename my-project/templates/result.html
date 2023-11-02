@@ -11,8 +11,8 @@
             <li>
                 <a href="https://www.google.com/search?q={{ title }}">{{ title }}</a>
             </li>
-            <form class="button" action>
-                <button class="btn btn-primary" type="submit">add to list</button>
+            <form class="button" action="/list" method="POST">
+                <button class="btn btn-primary" name="title" value="{{ title }}" type="submit">add to list</button>
             </form>
         </div>
         {% endfor %}
