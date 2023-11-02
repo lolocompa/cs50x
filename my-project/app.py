@@ -188,4 +188,4 @@ def list():
         title = request.form.get("title")
         released = db.execute("SELECT year FROM movies WHERE title = ?", title)
         rating = db.execute("SELECT rating FROM rating WHERE movie_id = (SELECT id FROM movies WHERE title = ?)", title)
-        
+        db.execute("INSERT INTO list ()")
