@@ -184,3 +184,7 @@ def index():
 def list():
     if request.method == "GET":
         return render_template("list.html")
+    else:
+        title = request.form.get("title")
+        released = db.execute("SELECT year FROM movies WHERE title = ?", title)
+        
