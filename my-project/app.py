@@ -188,5 +188,5 @@ def list():
         user_id = session["user_id"]
         title = request.form.get("title")
         released = db.execute("SELECT year FROM movies WHERE title = ?", title)
-        rating = db.execute("SELECT rating FROM rating WHERE movie_id = (SELECT id FROM movies WHERE title = ?)", title)
+        rating = db.execute("SELECT rating FROM ratings WHERE movie_id = (SELECT id FROM movies WHERE title = ?)", title)
         db.execute("INSERT INTO list (title, year, rating, user_id) VALUES (?, ?, ?, ?)", title, released, rating, user_id)
