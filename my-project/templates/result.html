@@ -9,6 +9,9 @@
         {% for title in movie_titles %}
             <li>
                 <a href="https://www.google.com/search?q={{ title }}">{{ title }}</a>
+                <form>
+                    <button class="btn btn-primary" type="submit">add to list</button>
+                </form>
             </li>
         {% endfor %}
     </ul>
