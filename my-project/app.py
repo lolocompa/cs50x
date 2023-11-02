@@ -129,36 +129,41 @@ def index():
         actor2 = request.form.get("actor2")
         director = request.form.get("director")
 
-        params = []
-
         query = "SELECT DISTINCT movies.id, movies.title FROM movies"
 
+        joins = []
+        conditions = []
+        params = []
+
         if year:
-            query += " LEFT JOIN ratings ON movies.id = ratings.movie_id"
-            query += " WHERE movies.year >= ?"
+            joins.append("LEFT JOIN ratings ON movies.id = ratings.movie_id")
+            conditions.append("movies.year >= ?")
             params.append(year)
         if rating:
-            if year:
-                query += " AND ratings.rating >= ?"
-            else:
-                query += " LEFT JOIN ratings ON movies.id = ratings.movie_id"
-                query += " WHERE ratings.rating >= ?"
+            if "ratings" not in joins:
+                joins.append("LEFT JOIN ratings ON movies.id = ratings.movie_id")
+            conditions.append("ratings.rating >= ?")
             params.append(rating)
         if actor1:
-            query += " LEFT JOIN stars AS s1 ON movies.id = s1.movie_id"
-            query += " LEFT JOIN people AS p1 ON s1.person_id = p1.id"
-            query += " WHERE p1.name LIKE ?"
+            joins.append("LEFT JOIN stars AS s1 ON movies.id = s1.movie_id")
+            joins.append("LEFT JOIN people AS p1 ON s1.person_id = p1.id")
+            conditions.append("p1.name LIKE ?")
             params.append(f'%{actor1}%')
         if actor2:
-            query += " LEFT JOIN stars AS s2 ON movies.id = s2.movie_id"
-            query += " LEFT JOIN people AS p2 ON s2.person_id = p2.id"
-            query += " WHERE p2.name LIKE ?"
+            joins.append("LEFT JOIN stars AS s2 ON movies.id = s2.movie_id")
+            joins.append("LEFT JOIN people AS p2 ON s2.person_id = p2.id")
+            conditions.append("p2.name LIKE ?")
             params.append(f'%{actor2}%')
         if director:
-            query += " LEFT JOIN directors AS d ON movies.id = d.movie_id"
-            query += " LEFT JOIN people AS pd ON d.person_id = pd.id"
-            query += " WHERE pd.name LIKE ?"
+            joins.append("LEFT JOIN directors AS d ON movies.id = d.movie_id")
+            joins.append("LEFT JOIN people AS pd ON d.person_id = pd.id")
+            conditions.append("pd.name LIKE ?")
             params.append(f'%{director}%')
+
+        if joins:
+            query += " " + " ".join(joins)
+        if conditions:
+            query += " WHERE " + " AND ".join(conditions)
 
         # Execute the SQL query using your database connection
         results = db.execute(query, *params)
