@@ -187,4 +187,4 @@ def list():
     else:
         title = request.form.get("title")
         released = db.execute("SELECT year FROM movies WHERE title = ?", title)
-        
+        rating = db.execute("")
