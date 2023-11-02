@@ -134,29 +134,29 @@ def index():
         query = "SELECT DISTINCT movies.id, movies.title FROM movies"
 
         if year:
-            query += " JOIN ratings ON movies.id = ratings.movie_id"
+            query += " LEFT JOIN ratings ON movies.id = ratings.movie_id"
             query += " WHERE movies.year >= ?"
             params.append(year)
         if rating:
             if year:
                 query += " AND ratings.rating >= ?"
             else:
-                query += " JOIN ratings ON movies.id = ratings.movie_id"
+                query += " LEFT JOIN ratings ON movies.id = ratings.movie_id"
                 query += " WHERE ratings.rating >= ?"
             params.append(rating)
         if actor1:
-            query += " JOIN stars AS s1 ON movies.id = s1.movie_id"
-            query += " JOIN people AS p1 ON s1.person_id = p1.id"
+            query += " LEFT JOIN stars AS s1 ON movies.id = s1.movie_id"
+            query += " LEFT JOIN people AS p1 ON s1.person_id = p1.id"
             query += " WHERE p1.name LIKE ?"
             params.append(f'%{actor1}%')
         if actor2:
-            query += " JOIN stars AS s2 ON movies.id = s2.movie_id"
-            query += " JOIN people AS p2 ON s2.person_id = p2.id"
+            query += " LEFT JOIN stars AS s2 ON movies.id = s2.movie_id"
+            query += " LEFT JOIN people AS p2 ON s2.person_id = p2.id"
             query += " WHERE p2.name LIKE ?"
             params.append(f'%{actor2}%')
         if director:
-            query += " JOIN directors AS d ON movies.id = d.movie_id"
-            query += " JOIN people AS pd ON d.person_id = pd.id"
+            query += " LEFT JOIN directors AS d ON movies.id = d.movie_id"
+            query += " LEFT JOIN people AS pd ON d.person_id = pd.id"
             query += " WHERE pd.name LIKE ?"
             params.append(f'%{director}%')
 
