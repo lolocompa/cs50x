@@ -136,13 +136,13 @@ def index():
         params = []
 
         if year:
-            joins.append("LEFT JOIN ratings ON movies.id = ratings.movie_id")
+            joins.append("LEFT JOIN ratings AS r1 ON movies.id = r1.movie_id")
             conditions.append("movies.year >= ?")
             params.append(year)
         if rating:
-            if "ratings" not in joins:
-                joins.append("LEFT JOIN ratings ON movies.id = ratings.movie_id")
-            conditions.append("ratings.rating >= ?")
+            if "r1" not in [join[18:20] for join in joins]:
+                joins.append("LEFT JOIN ratings AS r2 ON movies.id = r2.movie_id")
+            conditions.append("r2.rating >= ?")
             params.append(rating)
         if actor1:
             joins.append("LEFT JOIN stars AS s1 ON movies.id = s1.movie_id")
