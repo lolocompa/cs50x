@@ -182,4 +182,5 @@ def index():
 @app.route("/list", methods=["GET", "POST"])
 @login_required
 def list():
-    
+    if request.method = "GET":
+        return render_template("list.html")
