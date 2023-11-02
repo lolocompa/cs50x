@@ -7,11 +7,11 @@
 {% block main %}
     <ul>
         {% for title in movie_titles %}
-        <div>
+        <div class="movie_list">
             <li>
                 <a href="https://www.google.com/search?q={{ title }}">{{ title }}</a>
             </li>
-            <form>
+            <form class="button">
                 <button class="btn btn-primary" type="submit">add to list</button>
             </form>
         </div>
