@@ -9,17 +9,25 @@
         <table>
             <thead>
                 <tr>
-                    <th>name</th>
+                    <th>title</th>
                     <th>year</th>
                     <th>rating</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
+                {% for movie in movie_list %}
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.year }}</td>
+                    <td>{{ movie.rating }}</td>
+                    <td>
+                        <form action="/remove" method="POST">
+                        <button class="btn btn-primary" name="name" value="{{ movie.title }}" type="submit">Remove</button>
+                        </form>
+                    </td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

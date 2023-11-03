@@ -129,7 +129,13 @@ def index():
         actor2 = request.form.get("actor2")
         director = request.form.get("director")
 
-        query = "SELECT DISTINCT movies.id, movies.title FROM movies"
+        if rating:
+            check = int(rating)
+            if check < 0:
+                return apology("enter a positive number between 0 and 10")
+
+
+        query = "SELECT DISTINCT movies.id, movies.title FROM movies "
 
         joins = []
         conditions = []
@@ -141,7 +147,7 @@ def index():
             params.append(year)
         if rating:
             if "r1" not in [join[18:20] for join in joins]:
-                joins.append("LEFT JOIN ratings AS r2 ON movies.id = r2.movie_id")
+                joins.append("LEFT JOIN ratings AS r2 ON movies.id = r2.movie_id LIMIT 50")
             conditions.append("r2.rating >= ?")
             params.append(rating)
         if actor1:
@@ -150,13 +156,13 @@ def index():
             conditions.append("p1.name LIKE ?")
             params.append(f'%{actor1}%')
         if actor2:
-            joins.append("LEFT JOIN stars AS s2 ON movies.id = s2.movie_id")
+            joins.append("LEFT JOIN stars AS s2 ON movies.id = s2.movie_id LIMIT 50")
             joins.append("LEFT JOIN people AS p2 ON s2.person_id = p2.id")
             conditions.append("p2.name LIKE ?")
             params.append(f'%{actor2}%')
         if director:
-            joins.append("LEFT JOIN directors AS d ON movies.id = d.movie_id")
-            joins.append("LEFT JOIN people AS pd ON d.person_id = pd.id")
+            joins.append("LEFT JOIN directors AS d ON movies.id = d.movie_id LIMIT 50")
+            joins.append("LEFT JOIN people AS pd ON d.person_id = pd.id ")
             conditions.append("pd.name LIKE ?")
             params.append(f'%{director}%')
 
@@ -165,6 +171,7 @@ def index():
         if conditions:
             query += " WHERE " + " AND ".join(conditions)
 
+        query += "LIMIT 150"
         # Execute the SQL query using your database connection
         results = db.execute(query, *params)
 
@@ -181,12 +188,27 @@ def index():
 
 @app.route("/list", methods=["GET", "POST"])
 @login_required
-def list():
+def movie_list():
     if request.method == "GET":
-        return render_template("list.html")
+        movie_list = db.execute("SELECT * FROM list")
+        return render_template("list.html", movie_list=movie_list)
     else:
         user_id = session["user_id"]
         title = request.form.get("title")
         released = db.execute("SELECT year FROM movies WHERE title = ?", title)
         rating = db.execute("SELECT rating FROM ratings WHERE movie_id = (SELECT id FROM movies WHERE title = ?)", title)
-        db.execute("INSERT INTO list (title, year, rating, user_id) VALUES (?, ?, ?, ?)", title, released, rating, user_id)
+        db.execute("INSERT INTO list (title, year, rating, user_id) VALUES (?, ?, ?, ?)", title, released[0]["year"], rating[0]["rating"], user_id)
+        return redirect("/")
+
+
+
+
+
+@app.route("/remove", methods=["POST"])
+@login_required
+def remove():
+    if request.method == "POST":
+        user_id = session["user_id"]
+        title = request.form.get("name")
+        db.execute("DELETE FROM list WHERE user_Id = ? AND title = ?", user_id, title)
+        return redirect("/list")
