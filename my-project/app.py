@@ -129,10 +129,7 @@ def index():
         actor2 = request.form.get("actor2")
         director = request.form.get("director")
 
-        if rating:
-            check = int(rating)
-            if check < 0:
-                return apology("enter a positive number between 0 and 10")
+
 
 
         query = "SELECT DISTINCT movies.id, movies.title FROM movies "
