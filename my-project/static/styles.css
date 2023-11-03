@@ -8,8 +8,9 @@ body, h1, h2, ul {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url("background3.png");
-    background-size: cover; /* Adjust to your preference */
+    background-image: url("background3.png"); /* Replace with the URL of your background image */
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
