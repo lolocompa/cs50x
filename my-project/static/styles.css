@@ -8,6 +8,9 @@ body, h1, h2, ul {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    background-image: url("");
+    background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat;
 }
 
 header {
