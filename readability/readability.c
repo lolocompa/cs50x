@@ -19,7 +19,7 @@ int main(void)
             words++;
         }
     }
-
+    printf("%f", words)
 
 
     float sentences = 0;
@@ -48,7 +48,7 @@ int main(void)
     printf("Grade %i\n", grade);
     }
 
-    
+
 
 }
 
