@@ -19,7 +19,7 @@ int main(void)
             words++;
         }
     }
-    printf("%f", words);
+    printf("%f\n", words);
 
 
     float sentences = 0;
